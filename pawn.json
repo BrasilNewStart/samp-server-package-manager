@@ -1,0 +1,7 @@
+{
+    "user": "BrasilNewStart",
+    "repo": "lpsr-itens",
+    "dependencies": [
+        "Southclaws/samp-stdlib"
+    ]
+}
