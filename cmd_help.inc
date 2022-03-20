@@ -2,32 +2,34 @@
 #include < YSI_Coding\y_hooks >
 
 // Defina;
-#define         HELP_FAZENDA        1
-#define         HELP_COZINHA        2
-#define         HELP_LIDER          3
-#define         HELP_CELULAR        4
-#define         HELP_FORUM          5
-#define         HELP_DISCORD        6
-#define         HELP_ATUALIZACAO    7
-#define         HELP_COMPRAR_CASH   8
-#define         HELP_GERAL          9
-#define         HELP_ORG            10
-#define         HELP_EMPREGO        11
-#define         HELP_HOUSE          12
-#define         HELP_VEHICLE        13
-#define         HELP_VIP            14
-#define         HELP_RADIO          15
-#define         HELP_CAIXA          16
-#define         HELP_CAIXA2         17
-#define         HELP_DROGAS         18
-#define         HELP_SACOLAS        19
-#define         HELP_PROPRIEDADES   20
-#define         HELP_REGRAS         21
-#define         HELP_ALUGUEL        22
+#define         HELP_FAZENDA                1
+#define         HELP_COZINHA                2
+#define         HELP_LIDER                  3
+#define         HELP_CELULAR                4
+#define         HELP_FORUM                  5
+#define         HELP_DISCORD                6
+#define         HELP_ATUALIZACAO            7
+#define         HELP_COMPRAR_CASH           8
+#define         HELP_GERAL                  9
+#define         HELP_ORG                    10
+#define         HELP_EMPREGO                11
+#define         HELP_HOUSE                  12
+#define         HELP_VEHICLE                13
+#define         HELP_VIP                    14
+#define         HELP_RADIO                  15
+#define         HELP_CAIXA                  16
+#define         HELP_CAIXA2                 17
+#define         HELP_DROGAS                 18
+#define         HELP_SACOLAS                19
+#define         HELP_PROPRIEDADES           20
+#define         HELP_REGRAS                 21
+#define         HELP_ALUGUEL                22
+#define         HELP_PRIMEIROS_PASSOS       23
+#define         OPC_01_PRIMEIROS_PASSOS     24
 
 
 // Função;
-stock Help_List(helpid, const title_help[]="default") {
+stock Help_List(playerid, helpid, const title_help[]="default") {
 
     MEGAString[0] = EOS;
 
@@ -816,6 +818,24 @@ stock Help_List(helpid, const title_help[]="default") {
             //strcat(MEGAString, "        {797978}1. {FFFFFF}O jogador esteve ativo por 1 hora no dia anterior, caso despejar, perderá -50 de reputação Empreendedor.\n");
             strcat(MEGAString, "        {797978}1. {FFFFFF}O jogador está online no momento, caso despejar, perderá -60 de reputação Empreendedor.\n");
         }
+
+        // Como pegar um emprego
+        case HELP_PRIMEIROS_PASSOS: {
+
+            strcat(MEGAString, "Como pegar um emprego?\n");
+    	
+            return ShowPlayerDialog(playerid, DIALOG_ID_HELP_CP, DIALOG_STYLE_LIST, "Primeiros passos:", MEGAString, "Fechar", "");
+        }
+
+        // Como pegar um emprego
+        case OPC_01_PRIMEIROS_PASSOS: {
+
+            // Ativa um checkpoint:
+            // playerid, x, y, z, tamanho;
+            SetPlayerCheckpoint(playerid, 0.0, 0.0, 0.0, 5.0);
+    	
+            return 1;
+        }
     }
     ShowPlayerDialog(playerid, 0, DIALOG_STYLE_MSGBOX, title_help, MEGAString, "Fechar", "");
 
@@ -831,29 +851,41 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
         switch (listitem)
 		{
-            case 0: Help_List(HELP_ATUALIZACAO);
-            case 1: Help_List(HELP_FORUM);
-            case 2: Help_List(HELP_DISCORD);
-            case 3: Help_List(HELP_COMPRAR_CASH, "Ajuda comprar cash");
+            case 0: Help_List(playerid, HELP_ATUALIZACAO);
+            case 1: Help_List(playerid, HELP_FORUM);
+            case 2: Help_List(playerid, HELP_DISCORD);
+            case 3: Help_List(playerid, HELP_COMPRAR_CASH, "Ajuda comprar cash");
 			case 4: cmd_rg(playerid);
-			case 5: Help_List(HELP_GERAL);
-			case 6: Help_List(HELP_ORG, "Ajuda organização");
-			case 7: Help_List(HELP_EMPREGO, "Ajuda emprego");
-			case 8: Help_List(HELP_CELULAR, "Ajuda celular");
-			case 9: Help_List(HELP_HOUSE, "{797978}Ajuda casa");
-			case 10: Help_List(HELP_PROPRIEDADES);
-			case 11: Help_List(HELP_VEHICLE);
-			case 12: Help_List(HELP_REGRAS);
-			case 13: Help_List(HELP_COZINHA, "Ajuda cozinha");
-			case 14: Help_List(HELP_ALUGUEL);
-			case 15: Help_List(HELP_LIDER, "Ajuda líder");
+			case 5: Help_List(playerid, HELP_GERAL);
+			case 6: Help_List(playerid, HELP_ORG, "Ajuda organização");
+			case 7: Help_List(playerid, HELP_EMPREGO, "Ajuda emprego");
+			case 8: Help_List(playerid, HELP_CELULAR, "Ajuda celular");
+			case 9: Help_List(playerid, HELP_HOUSE, "{797978}Ajuda casa");
+			case 10: Help_List(playerid, HELP_PROPRIEDADES);
+			case 11: Help_List(playerid, HELP_VEHICLE);
+			case 12: Help_List(playerid, HELP_REGRAS);
+			case 13: Help_List(playerid, HELP_COZINHA, "Ajuda cozinha");
+			case 14: Help_List(playerid, HELP_ALUGUEL);
+			case 15: Help_List(playerid, HELP_LIDER, "Ajuda líder");
 			case 16: cmd_gps(playerid);
-			case 17: Help_List(HELP_VIP);
-			case 18: Help_List(HELP_RADIO);
-			case 19: Help_List(HELP_FAZENDA, "Ajuda Fazenda");
-			case 20: Help_List(HELP_CAIXA);
-			case 21: Help_List(HELP_DROGAS);
+			case 17: Help_List(playerid, HELP_VIP);
+			case 18: Help_List(playerid, HELP_RADIO);
+			case 19: Help_List(playerid, HELP_FAZENDA, "Ajuda Fazenda");
+			case 20: Help_List(playerid, HELP_CAIXA);
+			case 21: Help_List(playerid, HELP_DROGAS);
 		}
 	    return 1;
 	}
+    else if (dialogid == DIALOG_ID_HELP_CP)
+	{
+	    if (!response) 
+            return SendClientMessage(playerid, -1, "Você fechou o menu de ajuda.");
+
+        switch (listitem)
+		{
+            case 0: Help_List(playerid, OPC_01_PRIMEIROS_PASSOS);
+		}
+	    return 1;
+	}
+    return 1;
 }
