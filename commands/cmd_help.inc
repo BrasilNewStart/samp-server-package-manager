@@ -29,7 +29,7 @@
 
 
 // Função;
-stock Help_List(playerid, helpid, const title_help[]="default") {
+stock Help_List(playerid, helpid = 0, const title_help[]="default") {
 
     MEGAString[0] = EOS;
 
