@@ -24,8 +24,8 @@
 #define         HELP_PROPRIEDADES           20
 #define         HELP_REGRAS                 21
 #define         HELP_ALUGUEL                22
-#define         HELP_PRIMEIROS_PASSOS       23
-#define         OPC_01_PRIMEIROS_PASSOS     24
+#define         OPC_01_PRIMEIROS_PASSOS     23
+#define         OPC_02_PRIMEIROS_PASSOS     24
 #define         HELP_VIRAR_LIDER            25
 #define         HELP_GIFT_CARD              26
 #define         HELP_PRIMEIROS_PASSOS       27
@@ -36,6 +36,8 @@
 #define         HELP_TROCAR_NICK            32
 #define         HELP_NEGOCIAR               33
 #define         HELP_ATENDIMENTO            34
+#define         OPC_03_PRIMEIROS_PASSOS     35
+#define         OPC_04_PRIMEIROS_PASSOS     36
 
 // Função;
 stock Help_List(playerid, helpid = 0, const title_help[]="default") {
@@ -46,15 +48,15 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
 
         // /ajuda (Começa pelo ID 0, ou seja, "Atualizações" é o ID 0...)
         case 0: {
-	    strcat(MEGAString, " {00FF00}» {00FF00}Iniciantes {00FA9A}» Primeiros passos\n")
-	    strcat(MEGAString, " {00FF00}» {00FF00}Segurança {00FA9A}» Como fazer uma venda/troca segura\n")
+            strcat(MEGAString, " {00FF00}» {00FF00}Iniciantes {00FA9A}» Primeiros passos\n");
+            strcat(MEGAString, " {00FF00}» {00FF00}Segurança {00FA9A}» Como fazer uma venda/troca segura\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Atualizações\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Fórum\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Discord\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Comprar Cash\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Documentos\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Comandos em Geral\n");
-	    strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Como pedir ajuda administrativa\n");
+	        strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Como pedir ajuda administrativa\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Organização\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Empregos\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Celular\n");
@@ -71,51 +73,44 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Fazendas\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Caixas Surpresa\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Drogas\n");
-	    strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FF00FF}» Como virar um líder\n");
+	        strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FF00FF}» Como virar um líder\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Comprar Cash com GIFT CARD\n");
-	    strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Como entrar em uma organização Policial e Criminosa\n");
-	    strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Como beber água e comer alguma coisa\n");
-	    strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Como virar VIP\n");
-	    strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Como conseguir uma arma\n");
-	    strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Como trocar o meu nick\n");
+            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Como entrar em uma organização Policial e Criminosa\n");
+            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Como beber água e comer alguma coisa\n");
+            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Como virar VIP\n");
+            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Como conseguir uma arma\n");
+            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Como trocar o meu nick\n");
 
             return ShowPlayerDialog(playerid, DIALOG_ID_HELP, DIALOG_STYLE_LIST, "{FFFFFF}» {00AAFF}Ajuda do Servidor", MEGAString, "Selecionar", "Cancelar");
         }
-	case HELP_PRIMEIROS_PASSOS: {
+	    case HELP_PRIMEIROS_PASSOS: {
             strcat(MEGAString, "{00BFFF}Conseguir uma Carteira de motorista\n");
             strcat(MEGAString, "{00BFFF}Comprar um celular e agenda\n");
             strcat(MEGAString, "{00BFFF}Conseguir um emprego\n");
             strcat(MEGAString, "{00BFFF}Presente do PayDay para conseguir Level\n");
            
-
-             return ShowPlayerDialog(playerid, DIALOG_ID_HELP_CP, DIALOG_STYLE_LIST, "Primeiros passos:", MEGAString, "Fechar", "");
-
+            return ShowPlayerDialog(playerid, DIALOG_ID_HELP_CP, DIALOG_STYLE_LIST, "Primeiros passos:", MEGAString, "Fechar", "");
         }
-	// Checkpoints do Primeiros Passos
+	    // Checkpoints do Primeiros Passos
    
         case OPC_01_PRIMEIROS_PASSOS: {
-            SetPlayerCheckpoint(playerid, 141,1412.8845,-1700.2332,13.5395,334.2154,0,0,0,0,0,0);
-    	
+            SetPlayerCheckpoint(playerid, 1412.8845, -1700.2332, 13.5395, 8.0);
             return 1;
         }
         case OPC_02_PRIMEIROS_PASSOS: {
-            SetPlayerCheckpoint(playerid, 141,1832.3284,-1842.6686,13.5781,332.5636,0,0,0,0,0,0);
-    	
+            SetPlayerCheckpoint(playerid, 1832.3284, -1842.6686, 13.5781, 8.0);
             return 1;
             
         }
         case OPC_03_PRIMEIROS_PASSOS: {
-            SetPlayerCheckpoint(playerid, 141,1125.1439,-2036.8538,69.8822,101.0735,0,0,0,0,0,0);
-    	
+            SetPlayerCheckpoint(playerid, 1125.1439, -2036.8538, 69.8822, 8.0);
             return 1;
         }
-	 case OPC_04_PRIMEIROS_PASSOS: {
-            SetPlayerCheckpoint(playerid, 141,1479.4220,-1640.0881,14.1484,299.9952,0,0,0,0,0,0);
-    	
+	    case OPC_04_PRIMEIROS_PASSOS: {
+            SetPlayerCheckpoint(playerid, 1479.4220, -1640.0881, 14.1484, 8.0);
             return 1;
-            
         }
-	case HELP_VIRAR_LIDER: {
+	    case HELP_VIRAR_LIDER: {
             strcat(MEGAString, "{49E468}FAQ: {DBDCE0}Ser líder de uma organização\n");
 
             strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Como faço para ser líder de uma organização?\n");
@@ -126,7 +121,6 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
 
             strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}Como entro no fórum?\n");
             strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Digite /forum pegue o link e vá até seu navegador pesquisar o link.\n\n");
-
         }
     
         case HELP_GIFT_CARD: {
@@ -134,56 +128,45 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
 
             strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Como compro cash por GIFT CARD?\n");
             strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Entre em contato no discord com KatarinaJensen#0016, para efetuar a compra.\n\n");
-
-
         }
        
-       case HELP_ENTRAR_ORG: {
+        case HELP_ENTRAR_ORG: {
                strcat(MEGAString, "{797978}Como entrar em uma organização: \n{FFFFFF}Para você entrar em uma organização você deve entrar em contato com algum LÍDER ou SUBLIDER para fazer o teste, utilize o /lideres e /sublideres para ver se estão onlines no momento.\n\n");
-    	
-    
         }
       
-      case HELP_FOME_SEDE: {
-               strcat(MEGAString, "{797978}Como bebo água e como alguma coisa?: \n{FFFFFF}Você deve ir em alguma propriedade para comprar água e comida, utilize /gps >> Comércios >> Alhambra(Água), Burget Shot(Comida).\n\n");
- 
+        case HELP_FOME_SEDE: {
+            strcat(MEGAString, "{797978}Como bebo água e como alguma coisa?: \n{FFFFFF}Você deve ir em alguma propriedade para comprar água e comida, utilize /gps >> Comércios >> Alhambra(Água), Burget Shot(Comida).\n\n");
         }
         
-	case HELP_VIRAR_VIP: {
-               strcat(MEGAString, "{797978}Como viro VIP?: \n{FFFFFF}Para virar vip você deve ter uma quantia em CASH, para verificar o valor digite /menu >> Loja Cash .\n\n");
+        case HELP_VIRAR_VIP: {
+            strcat(MEGAString, "{797978}Como viro VIP?: \n{FFFFFF}Para virar vip você deve ter uma quantia em CASH, para verificar o valor digite /menu >> Loja Cash .\n\n");
 
-                strcat(MEGAString, "{797978}Como compro cash?: \n{FFFFFF}Utilize o /ajuda >> Comprar Cash .\n\n");
-    	
+            strcat(MEGAString, "{797978}Como compro cash?: \n{FFFFFF}Utilize o /ajuda >> Comprar Cash .\n\n");
         }
         
-	case HELP_CONSEGUIR_ARMA: {
-               strcat(MEGAString, "{797978}Como consigo uma arma?: \n{FFFFFF}Você consegue uma arma comprando em uma propriedae digite /GPS >> Ammu Nation ou sendo de uma organização.\n\n");
-                 
+        case HELP_CONSEGUIR_ARMA: {
+            strcat(MEGAString, "{797978}Como consigo uma arma?: \n{FFFFFF}Você consegue uma arma comprando em uma propriedae digite /GPS >> Ammu Nation ou sendo de uma organização.\n\n");
         }
         
-	case HELP_TROCAR_NICK: {
-               strcat(MEGAString, "{797978}Como troco o nick?: \n{FFFFFF}Para trocar o nick você pode comprar o nick em /menu >> Loja Cash >> Itens ou comprando de players.\n\n");        
-    	
+        case HELP_TROCAR_NICK: {
+            strcat(MEGAString, "{797978}Como troco o nick?: \n{FFFFFF}Para trocar o nick você pode comprar o nick em /menu >> Loja Cash >> Itens ou comprando de players.\n\n");        
         }
-         case HELP_NEGOCIAR: {
+        case HELP_NEGOCIAR: {
             strcat(MEGAString, "{49E468}FAQ: {DBDCE0}Como fazer uma VENDA/TROCA segura?\n");
 
             strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Como faço para fazer uma venda/troca segura?\n");
             strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Utilize a opção do negociar que está no seu inventário.\n\n");
 	    
-	    strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Caso eu for vender algo, como eu faço a cobrança?\n");
+            strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Caso eu for vender algo, como eu faço a cobrança?\n");
             strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Após o jogador aceitar a negociação irá ter uma opção chamada AJUSTE na sua tela aperte nela e irá ter as opções para você cobrar.\n\n");
 	    
-	    strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Como eu diferencio um veículo de INVENTÁRIO e de CONCESSIONÁRIA?\n");
+            strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Como eu diferencio um veículo de INVENTÁRIO e de CONCESSIONÁRIA?\n");
             strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Veículo de inventário sempre irá ter essa sinalização > (1) Exemplo: NRG-500(1) e o de concessionária não.\n\n");
-
-
         }
 	
-	case HELP_ATENDIMENTO: {
-               strcat(MEGAString, "{797978}Como peço uma ajuda administrativa?: \n{FFFFFF}Digite /atendimento ajuda, após isso aguarde o administrador pegar o seu atendimento.\n\n");        
-	
-    }
+        case HELP_ATENDIMENTO: {
+            strcat(MEGAString, "{797978}Como peço uma ajuda administrativa?: \n{FFFFFF}Digite /atendimento ajuda, após isso aguarde o administrador pegar o seu atendimento.\n\n");        
+        }
         case HELP_FAZENDA: {
             strcat(MEGAString, "\n\n{FF0000}________________________| AJUDA FAZENDA |________________________\n");
 
@@ -270,7 +253,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             return ShowPlayerDialog(playerid, 0, DIALOG_STYLE_MSGBOX, "Fórum do: {FFFF00}"SERVER_NAME"", "Entre em nosso fórum: {FFFF00}"SERVER_SITE"", "Informado","");
         }
         case HELP_DISCORD: {
-            return ShowPlayerDialog(playerid, 8724, DIALOG_STYLE_MSGBOX, "{00FF00}Discord ", "\n\n{8B8A8A}Discord do servidor: {FFFFFF}"discord.gg/brasilnewstart"\n\n", "Informado","");
+            return ShowPlayerDialog(playerid, 8724, DIALOG_STYLE_MSGBOX, "{00FF00}Discord ", "\n\n{8B8A8A}Discord do servidor: {FFFFFF}"SERVER_DISCORD"\n\n", "Informado","");
         }
         case HELP_ATUALIZACAO: {
             strcat(MEGAString, "\n{EA3D3D}OBS: A melhor forma de relatar um BUG de até 100 caracteres (digite abaixo):");
@@ -538,16 +521,13 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             //SendClientMessage(playerid, -1, "/veiculo ajuda | /veiculo comprar | /veiculo revender | /veiculo localizar | /veiculo removertunning");
             //SendClientMessage(playerid, -1, "/veiculo estacionar | /veiculo seguro | /trancar");
 	    
-	     strcat(MEGAString, "{797978}Como conseguir um carro de concessionária?: \n{FFFFFF}Para ir até uma concessionária utilize o /GPS >> Concessionárias.\n\n");
-	     
-	     strcat(MEGAString, "{797978}Revenda: \n{FFFFFF}Local onde revende o carro /GPS >> Comercios >> Revendedora & Seguradora.\n\n");
+            strcat(MEGAString, "{797978}Como conseguir um carro de concessionária?: \n{FFFFFF}Para ir até uma concessionária utilize o /GPS >> Concessionárias.\n\n");
+            
+            strcat(MEGAString, "{797978}Revenda: \n{FFFFFF}Local onde revende o carro /GPS >> Comercios >> Revendedora & Seguradora.\n\n");
     	
             strcat(MEGAString, "{797978}Comandos: \n{FFFFFF}/veiculo ajuda | /veiculo comprar | /veiculo revender | /veiculo localizar | /veiculo removertunning | /veiculo estacionar | /trancar.\n\n");
             
             strcat(MEGAString, "{797978}Informações Adicionais: \n{FFFFFF}Caso você não estacione o carro em algum local, ele será salvo na {FFFF00}ultima posição {FFFFFF}que foi encontrado.\n\n");
-            
-   
-            return 1;
         }
         case HELP_VIP: {
             strcat(MEGAString, "{7D8084}Beneficios do\t{A4CCC3}Sócio Comum\n");
@@ -949,6 +929,9 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             //strcat(MEGAString, "        {797978}1. {FFFFFF}O jogador esteve ativo por 1 hora no dia anterior, caso despejar, perderá -50 de reputação Empreendedor.\n");
             strcat(MEGAString, "        {797978}1. {FFFFFF}O jogador está online no momento, caso despejar, perderá -60 de reputação Empreendedor.\n");
         }
+    }
+    return ShowPlayerDialog(playerid, 0, DIALOG_STYLE_MSGBOX, title_help, MEGAString, "Fechar", "");
+}
 
 hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]) 
 {
@@ -959,12 +942,12 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 
         switch (listitem)
 		{
-                        case 0: Help_List(playerid, HELP_PRIMEIROS_PASSOS);
+            case 0: Help_List(playerid, HELP_PRIMEIROS_PASSOS);
 			case 1: Help_List(playerid, HELP_NEGOCIAR);
-                        case 2: Help_List(playerid, HELP_ATUALIZACAO);
-                        case 3: Help_List(playerid, HELP_FORUM);
-                        case 4: Help_List(playerid, HELP_DISCORD);
-                        case 5: Help_List(playerid, HELP_COMPRAR_CASH, "Ajuda comprar cash");
+            case 2: Help_List(playerid, HELP_ATUALIZACAO);
+            case 3: Help_List(playerid, HELP_FORUM);
+            case 4: Help_List(playerid, HELP_DISCORD);
+            case 5: Help_List(playerid, HELP_COMPRAR_CASH, "Ajuda comprar cash");
 			case 6: cmd_rg(playerid);
 			case 7: Help_List(playerid, HELP_GERAL);
 			case 8: Help_List(playerid, HELP_ATENDIMENTO);
@@ -984,13 +967,13 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			case 22: Help_List(playerid, HELP_FAZENDA, "Ajuda Fazenda");
 			case 23: Help_List(playerid, HELP_CAIXA);
 			case 24: Help_List(playerid, HELP_DROGAS);
-			case 25: Help_List(playerid, HELP_VIRAR_LIDER)
-                        case 26: Help_List(playerid, HELP_GIFT_CARD)
-                        case 27: Help_List(playerid, HELP_ENTRAR_ORG)
-                        case 28: Help_List(playerid, HELP_FOME_SEDE)
-                        case 29: Help_List(playerid, HELP_VIRAR_VIP)
-                        case 30: Help_List(playerid, HELP_CONSEGUIR_ARMA)
-                        case 31: Help_List(playerid, HELP_TROCAR_NICK)
+			case 25: Help_List(playerid, HELP_VIRAR_LIDER);
+            case 26: Help_List(playerid, HELP_GIFT_CARD);
+            case 27: Help_List(playerid, HELP_ENTRAR_ORG);
+            case 28: Help_List(playerid, HELP_FOME_SEDE);
+            case 29: Help_List(playerid, HELP_VIRAR_VIP);
+            case 30: Help_List(playerid, HELP_CONSEGUIR_ARMA);
+            case 31: Help_List(playerid, HELP_TROCAR_NICK);
 		}
 	    return 1;
 	}
@@ -1002,9 +985,9 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
         switch (listitem)
 		{
             case 0: Help_List(playerid, OPC_01_PRIMEIROS_PASSOS);
-	      case 1: Help_List(playerid, OPC_02_PRIMEIROS_PASSOS);
+	        case 1: Help_List(playerid, OPC_02_PRIMEIROS_PASSOS);
 	        case 2: Help_List(playerid, OPC_03_PRIMEIROS_PASSOS);
-		  case 0: Help_List(playerid, OPC_04_PRIMEIROS_PASSOS);
+		    case 3: Help_List(playerid, OPC_04_PRIMEIROS_PASSOS);
 		}
 	    return 1;
 	}
