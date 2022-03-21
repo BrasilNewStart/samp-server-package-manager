@@ -1,4 +1,4 @@
-// Includes necess·rias
+// Includes necess√°rias
 #include < YSI_Coding\y_hooks >
 
 // Defina;
@@ -26,69 +26,191 @@
 #define         HELP_ALUGUEL                22
 #define         HELP_PRIMEIROS_PASSOS       23
 #define         OPC_01_PRIMEIROS_PASSOS     24
+#define         HELP_VIRAR_LIDER            25
+#define         HELP_GIFT_CARD              26
+#define         HELP_PRIMEIROS_PASSOS       27
+#define         HELP_ENTRAR_ORG             28
+#define         HELP_FOME_SEDE              29
+#define         HELP_VIRAR_VIP              30
+#define         HELP_CONSEGUIR_ARMA         31
+#define         HELP_TROCAR_NICK            32
+#define         HELP_NEGOCIAR               33
+#define         HELP_ATENDIMENTO            34
 
-
-// FunÁ„o;
+// Fun√ß√£o;
 stock Help_List(playerid, helpid = 0, const title_help[]="default") {
 
     MEGAString[0] = EOS;
 
     switch(helpid) {
 
-        // /ajuda (ComeÁa pelo ID 0, ou seja, "AtualizaÁıes" È o ID 0...)
+        // /ajuda (Come√ßa pelo ID 0, ou seja, "Atualiza√ß√µes" √© o ID 0...)
         case 0: {
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª AtualizaÁıes\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª FÛrum\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª TeamSpeak & Discord\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {00FF00}ª Comprar Cash\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª Documentos\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª Comandos em Geral\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª OrganizaÁ„o\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª Empregos\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª Celular\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª Casas\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª Empresas\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª Carros\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª Regras\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª Cozinha\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª Aluguel\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª LÌder\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª GPS\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª BenefÌcios de SÛcios\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª JBL\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª Fazendas\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª Caixas Surpresa\n");
-            strcat(MEGAString, " {FFFFFF}ª {00AAFF}Ajuda {FFFFFF}ª Drogas\n");
+	    strcat(MEGAString, " {00FF00}¬ª {00FF00}Iniciantes {00FA9A}¬ª Primeiros passos\n")
+	    strcat(MEGAString, " {00FF00}¬ª {00FF00}Seguran√ßa {00FA9A}¬ª Como fazer uma venda/troca segura\n")
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Atualiza√ß√µes\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª F√≥rum\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Discord\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {00FF00}¬ª Comprar Cash\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Documentos\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Comandos em Geral\n");
+	    strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Como pedir ajuda administrativa\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Organiza√ß√£o\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Empregos\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Celular\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Casas\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Empresas\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Carros\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Regras\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Cozinha\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Aluguel\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª L√≠der\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª GPS\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Benef√≠cios de S√≥cios\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª JBL\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Fazendas\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Caixas Surpresa\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FFFFFF}¬ª Drogas\n");
+	    strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {FF00FF}¬ª Como virar um l√≠der\n");
+            strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {00FF00}¬ª Comprar Cash com GIFT CARD\n");
+	    strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {00FF00}¬ª Como entrar em uma organiza√ß√£o Policial e Criminosa\n");
+	    strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {00FF00}¬ª Como beber √°gua e comer alguma coisa\n");
+	    strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {00FF00}¬ª Como virar VIP\n");
+	    strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {00FF00}¬ª Como conseguir uma arma\n");
+	    strcat(MEGAString, " {FFFFFF}¬ª {00AAFF}Ajuda {00FF00}¬ª Como trocar o meu nick\n");
 
-            return ShowPlayerDialog(playerid, DIALOG_ID_HELP, DIALOG_STYLE_LIST, "{FFFFFF}ª {00AAFF}Ajuda do Servidor", MEGAString, "Selecionar", "Cancelar");
+            return ShowPlayerDialog(playerid, DIALOG_ID_HELP, DIALOG_STYLE_LIST, "{FFFFFF}¬ª {00AAFF}Ajuda do Servidor", MEGAString, "Selecionar", "Cancelar");
         }
+	case HELP_PRIMEIROS_PASSOS: {
+            strcat(MEGAString, "{00BFFF}Conseguir uma Carteira de motorista\n");
+            strcat(MEGAString, "{00BFFF}Comprar um celular e agenda\n");
+            strcat(MEGAString, "{00BFFF}Conseguir um emprego\n");
+            strcat(MEGAString, "{00BFFF}Presente do PayDay para conseguir Level\n");
+           
+
+             return ShowPlayerDialog(playerid, DIALOG_ID_HELP_CP, DIALOG_STYLE_LIST, "Primeiros passos:", MEGAString, "Fechar", "");
+
+        }
+	// Checkpoints do Primeiros Passos
+   
+        case OPC_01_PRIMEIROS_PASSOS: {
+            SetPlayerCheckpoint(playerid, 141,1412.8845,-1700.2332,13.5395,334.2154,0,0,0,0,0,0);
+    	
+            return 1;
+        }
+        case OPC_02_PRIMEIROS_PASSOS: {
+            SetPlayerCheckpoint(playerid, 141,1832.3284,-1842.6686,13.5781,332.5636,0,0,0,0,0,0);
+    	
+            return 1;
+            
+        }
+        case OPC_03_PRIMEIROS_PASSOS: {
+            SetPlayerCheckpoint(playerid, 141,1125.1439,-2036.8538,69.8822,101.0735,0,0,0,0,0,0);
+    	
+            return 1;
+        }
+	 case OPC_04_PRIMEIROS_PASSOS: {
+            SetPlayerCheckpoint(playerid, 141,1479.4220,-1640.0881,14.1484,299.9952,0,0,0,0,0,0);
+    	
+            return 1;
+            
+        }
+	case HELP_VIRAR_LIDER: {
+            strcat(MEGAString, "{49E468}FAQ: {DBDCE0}Ser l√≠der de uma organiza√ß√£o\n");
+
+            strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Como fa√ßo para ser l√≠der de uma organiza√ß√£o?\n");
+            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Voc√™ deve se registrar no nosso /forum e verificar sua conta para se inscrever para uma lideran√ßa.\n\n");
+
+            strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}Como eu fa√ßo para comprar uma organiza√ß√£o?\n");
+            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}No momento organiza√ß√µes n√£o est√£o sendo vendidas.\n\n");
+
+            strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}Como entro no f√≥rum?\n");
+            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Digite /forum pegue o link e v√° at√© seu navegador pesquisar o link.\n\n");
+
+        }
+    
+        case HELP_GIFT_CARD: {
+            strcat(MEGAString, "{49E468}FAQ: {DBDCE0}GIFT CARD\n");
+
+            strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Como compro cash por GIFT CARD?\n");
+            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Entre em contato no discord com KatarinaJensen#0016, para efetuar a compra.\n\n");
+
+
+        }
+       
+       case HELP_ENTRAR_ORG: {
+               strcat(MEGAString, "{797978}Como entrar em uma organiza√ß√£o: \n{FFFFFF}Para voc√™ entrar em uma organiza√ß√£o voc√™ deve entrar em contato com algum L√çDER ou SUBLIDER para fazer o teste, utilize o /lideres e /sublideres para ver se est√£o onlines no momento.\n\n");
+    	
+    
+        }
+      
+      case HELP_FOME_SEDE: {
+               strcat(MEGAString, "{797978}Como bebo √°gua e como alguma coisa?: \n{FFFFFF}Voc√™ deve ir em alguma propriedade para comprar √°gua e comida, utilize /gps >> Com√©rcios >> Alhambra(√Ågua), Burget Shot(Comida).\n\n");
+ 
+        }
+        
+	case HELP_VIRAR_VIP: {
+               strcat(MEGAString, "{797978}Como viro VIP?: \n{FFFFFF}Para virar vip voc√™ deve ter uma quantia em CASH, para verificar o valor digite /menu >> Loja Cash .\n\n");
+
+                strcat(MEGAString, "{797978}Como compro cash?: \n{FFFFFF}Utilize o /ajuda >> Comprar Cash .\n\n");
+    	
+        }
+        
+	case HELP_CONSEGUIR_ARMA: {
+               strcat(MEGAString, "{797978}Como consigo uma arma?: \n{FFFFFF}Voc√™ consegue uma arma comprando em uma propriedae digite /GPS >> Ammu Nation ou sendo de uma organiza√ß√£o.\n\n");
+                 
+        }
+        
+	case HELP_TROCAR_NICK: {
+               strcat(MEGAString, "{797978}Como troco o nick?: \n{FFFFFF}Para trocar o nick voc√™ pode comprar o nick em /menu >> Loja Cash >> Itens ou comprando de players.\n\n");        
+    	
+        }
+         case HELP_NEGOCIAR: {
+            strcat(MEGAString, "{49E468}FAQ: {DBDCE0}Como fazer uma VENDA/TROCA segura?\n");
+
+            strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Como fa√ßo para fazer uma venda/troca segura?\n");
+            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Utilize a op√ß√£o do negociar que est√° no seu invent√°rio.\n\n");
+	    
+	    strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Caso eu for vender algo, como eu fa√ßo a cobran√ßa?\n");
+            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Ap√≥s o jogador aceitar a negocia√ß√£o ir√° ter uma op√ß√£o chamada AJUSTE na sua tela aperte nela e ir√° ter as op√ß√µes para voc√™ cobrar.\n\n");
+	    
+	    strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Como eu diferencio um ve√≠culo de INVENT√ÅRIO e de CONCESSION√ÅRIA?\n");
+            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Ve√≠culo de invent√°rio sempre ir√° ter essa sinaliza√ß√£o > (1) Exemplo: NRG-500(1) e o de concession√°ria n√£o.\n\n");
+
+
+        }
+	
+	case HELP_ATENDIMENTO: {
+               strcat(MEGAString, "{797978}Como pe√ßo uma ajuda administrativa?: \n{FFFFFF}Digite /atendimento ajuda, ap√≥s isso aguarde o administrador pegar o seu atendimento.\n\n");        
+	
+    }
         case HELP_FAZENDA: {
             strcat(MEGAString, "\n\n{FF0000}________________________| AJUDA FAZENDA |________________________\n");
 
-            strcat(MEGAString, "\n{8B8A8A}Comandos disponÌveis:\n");
+            strcat(MEGAString, "\n{8B8A8A}Comandos dispon√≠veis:\n");
 
-            strcat(MEGAString, "\n{FFFFFF}ï /minhasfazendas 			{8B8A8A}(Para ver suas fazendas)\n");
-            strcat(MEGAString, "{FFFFFF}ï /fazenda info 				{8B8A8A}(Para ver as informaÁıes de sua fazenda)\n");
-            strcat(MEGAString, "{FFFFFF}ï /fazenda nome 			{8B8A8A}(Para alterar o nome da sua fazenda)\n");
-            strcat(MEGAString, "{FFFFFF}ï /fazenda extorsao 			{8B8A8A}(A pessoa que for a 'extors„o' ganhar· um lucro por minuto)\n");
-            strcat(MEGAString, "{FFFFFF}ï /fazenda precoproduto 		{8B8A8A}(Quantos pagar· por produto na fazenda)\n");
-            strcat(MEGAString, "{FFFFFF}ï /fazenda pedirprodutos 		{8B8A8A}(Para pedir para algum caminhoneiro lhe trazer produtos)\n");
-            strcat(MEGAString, "{FFFFFF}ï /chave 				{8B8A8A}(Para abrir/fechar sua fazenda)\n");
-            strcat(MEGAString, "{FFFFFF}ï /fazenda vender 			{8B8A8A}(Para vender sua fazenda)\n");
-            strcat(MEGAString, "{FFFFFF}ï /fazenda sacar 			{8B8A8A}(Para sacar os lucros da sua fazenda)\n");
-            strcat(MEGAString, "{FFFFFF}ï /fazenda depositar 			{8B8A8A}(Para depositar na sua fazenda para pagar por produtos)\n");
-            strcat(MEGAString, "{FFFFFF}ï /fazenda melhorarcofre 			{8B8A8A}(Para melhorar o cofre de sua fazenda)\n");
+            strcat(MEGAString, "\n{FFFFFF}‚Ä¢ /minhasfazendas 			{8B8A8A}(Para ver suas fazendas)\n");
+            strcat(MEGAString, "{FFFFFF}‚Ä¢ /fazenda info 				{8B8A8A}(Para ver as informa√ß√µes de sua fazenda)\n");
+            strcat(MEGAString, "{FFFFFF}‚Ä¢ /fazenda nome 			{8B8A8A}(Para alterar o nome da sua fazenda)\n");
+            strcat(MEGAString, "{FFFFFF}‚Ä¢ /fazenda extorsao 			{8B8A8A}(A pessoa que for a 'extors√£o' ganhar√° um lucro por minuto)\n");
+            strcat(MEGAString, "{FFFFFF}‚Ä¢ /fazenda precoproduto 		{8B8A8A}(Quantos pagar√° por produto na fazenda)\n");
+            strcat(MEGAString, "{FFFFFF}‚Ä¢ /fazenda pedirprodutos 		{8B8A8A}(Para pedir para algum caminhoneiro lhe trazer produtos)\n");
+            strcat(MEGAString, "{FFFFFF}‚Ä¢ /chave 				{8B8A8A}(Para abrir/fechar sua fazenda)\n");
+            strcat(MEGAString, "{FFFFFF}‚Ä¢ /fazenda vender 			{8B8A8A}(Para vender sua fazenda)\n");
+            strcat(MEGAString, "{FFFFFF}‚Ä¢ /fazenda sacar 			{8B8A8A}(Para sacar os lucros da sua fazenda)\n");
+            strcat(MEGAString, "{FFFFFF}‚Ä¢ /fazenda depositar 			{8B8A8A}(Para depositar na sua fazenda para pagar por produtos)\n");
+            strcat(MEGAString, "{FFFFFF}‚Ä¢ /fazenda melhorarcofre 			{8B8A8A}(Para melhorar o cofre de sua fazenda)\n");
 
             strcat(MEGAString, "\n{8B8A8A}Funcionamento:\n");
 
-            strcat(MEGAString, "\n{FFFFFF}ï A fazenda recebe $50.000 a cada 1 minuto, ou seja, $25.000 cada produto.\n");
-            strcat(MEGAString, "ï A fazenda usa 2 de produtos a cada 1 minuto.\n");
-            strcat(MEGAString, "ï A 'Extors„o' da fazenda recebe na conta $200 por minuto\n");
+            strcat(MEGAString, "\n{FFFFFF}‚Ä¢ A fazenda recebe $50.000 a cada 1 minuto, ou seja, $25.000 cada produto.\n");
+            strcat(MEGAString, "‚Ä¢ A fazenda usa 2 de produtos a cada 1 minuto.\n");
+            strcat(MEGAString, "‚Ä¢ A 'Extors√£o' da fazenda recebe na conta $200 por minuto\n");
 
             strcat(MEGAString, "\n{8B8A8A}Dicas:\n");
 
-            strcat(MEGAString, "\n{FFFFFF}ï De acordo com os ganhos o total que vocÍ dever· pagar por produto È:\n");
-            strcat(MEGAString, "de $14.500 · $18.000 por produto para os Caminhoneiros\n");
+            strcat(MEGAString, "\n{FFFFFF}‚Ä¢ De acordo com os ganhos o total que voc√™ dever√° pagar por produto √©:\n");
+            strcat(MEGAString, "de $14.500 √° $18.000 por produto para os Caminhoneiros\n");
             strcat(MEGAString, "* OBS: Retire sempre a grana da sua fazenda para evitar roubos de criminosos\n");
 
             strcat(MEGAString, "\n{FF0000}_________________________________________________________________\n\n");
@@ -97,24 +219,24 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             SendClientMessage(playerid, -1,"_______________________________________");
 
             SendClientMessage(playerid, 0x00FF00AA,"Ajuda cozinha");
-            SendClientMessage(playerid, COLOR_GRAD3,"Para cozinhar vocÍ precisa ficar de frente para um fog„o e usar...");
-            SendClientMessage(playerid, COLOR_GRAD3,"...em seu invent·rio, uma comida (Carne Crua ou Pizza Congelada).");
+            SendClientMessage(playerid, COLOR_GRAD3,"Para cozinhar voc√™ precisa ficar de frente para um fog√£o e usar...");
+            SendClientMessage(playerid, COLOR_GRAD3,"...em seu invent√°rio, uma comida (Carne Crua ou Pizza Congelada).");
 
             SendClientMessage(playerid, -1,"_______________________________________");
 
             return 1;
         }
         case HELP_LIDER: {
-            SendClientMessage(playerid, -1,"___________________________________ Ajuda LÌder ___________________________________");
+            SendClientMessage(playerid, -1,"___________________________________ Ajuda L√≠der ___________________________________");
 
-            // Caso seja lÌder
+            // Caso seja l√≠der
             if (IsLeaderOrg(playerid))
             {
                 SendClientMessage(playerid, COLOR_GRAD2,"- AJUDA LIDER - Comandos Disponiveis:");
                 SendClientMessage(playerid, COLOR_GRAD2,"- LIDER - /convidar /demitir /promover /L");
                 SendClientMessage(playerid, COLOR_YELLOW,"- OUTROS - /ajudaaluguel /ajudaempresa /ajudalider /ajudapesca /ajudacozinha");
 
-                // Caso seja lÌder do governo
+                // Caso seja l√≠der do governo
                 if(IsLeaderOrg(playerid) == ID_ORG_GOVERNO)
                 {
                     SendClientMessage(playerid, COLOR_GRAD3,"- PREFEITO - (/pre)feito /setartaxa (Taxa somente para Oficiais)");
@@ -123,7 +245,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             }
             else
             {
-                SendClientMessage(playerid, -1, "VocÍ n„o e um lider!");
+                SendClientMessage(playerid, -1, "Voc√™ n√£o e um lider!");
                 SendClientMessage(playerid, COLOR_YELLOW,"- OUTROS - /ajudaaluguel /ajudaempresa /ajudalider /ajudapesca /ajudacozinha");
             }
 
@@ -139,19 +261,19 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             }
             else
             {
-                SendClientMessage(playerid, -1,"VocÍ n„o possui um celular compre um na 24-7");
+                SendClientMessage(playerid, -1,"Voc√™ n√£o possui um celular compre um na 24-7");
             }
 
             return 1;
         }
         case HELP_FORUM: {
-            return ShowPlayerDialog(playerid, 0, DIALOG_STYLE_MSGBOX, "FÛrum do: {FFFF00}"SERVER_NAME"", "Entre em nosso fÛrum: {FFFF00}"SERVER_SITE"", "Informado","");
+            return ShowPlayerDialog(playerid, 0, DIALOG_STYLE_MSGBOX, "F√≥rum do: {FFFF00}"SERVER_NAME"", "Entre em nosso f√≥rum: {FFFF00}"SERVER_SITE"", "Informado","");
         }
         case HELP_DISCORD: {
-            return ShowPlayerDialog(playerid, 8724, DIALOG_STYLE_MSGBOX, "{00FF00}Discord & TeamSpeak", "\n\n{8B8A8A}TeamSpeak do servidor: {FFFFFF}"SERVER_TEAMSPEAK3"\n{8B8A8A}Discord do servidor: {FFFFFF}"SERVER_DISCORD"\n\n", "Informado","");
+            return ShowPlayerDialog(playerid, 8724, DIALOG_STYLE_MSGBOX, "{00FF00}Discord ", "\n\n{8B8A8A}Discord do servidor: {FFFFFF}"discord.gg/brasilnewstart"\n\n", "Informado","");
         }
         case HELP_ATUALIZACAO: {
-            strcat(MEGAString, "\n{EA3D3D}OBS: A melhor forma de relatar um BUG de atÈ 100 caracteres (digite abaixo):");
+            strcat(MEGAString, "\n{EA3D3D}OBS: A melhor forma de relatar um BUG de at√© 100 caracteres (digite abaixo):");
 
             new conteudo[120];
             format(conteudo, 120, "%s - %s", SERVER_VERSION, SERVER_VERSION_DATE);
@@ -161,25 +283,25 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             strcat(MEGAString, "{49E468}FAQ: {DBDCE0}COMPRAR CASH\n");
 
             strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Qual o valor do cash?\n");
-            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}O valor È R$1,00 cada ?1.000 cash.\n\n");
+            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}O valor √© R$1,00 cada ?1.000 cash.\n\n");
 
-            strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}Como eu faÁo para receber o cash apÛs pagamento?\n");
+            strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}Como eu fa√ßo para receber o cash ap√≥s pagamento?\n");
             strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Use o link: http://ativacao.brasilnewstart.com.br\n\n");
 
-            strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}H· como pagar via boleto?\n");
+            strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}H√° como pagar via boleto?\n");
             strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Sim, via PagSeguro e MercadoPago.\n\n");
 
-            strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}H· como pagar via cart„o de crÈdito?\n");
+            strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}H√° como pagar via cart√£o de cr√©dito?\n");
             strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Sim, via PagSeguro, MercadoPago, PayPal e PicPay.\n\n");
 
-            strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}Como faz depÛsito banc·rio?\n");
-            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Melhor mÈtodo, pegue os dados, marque no papel e pague na loterica.\n\n");
+            strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}Como faz dep√≥sito banc√°rio?\n");
+            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Melhor m√©todo, pegue os dados, marque no papel e pague na loterica.\n\n");
 
-            strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}Quando tem promoÁ„o de cash?\n");
-            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}As promoÁıes raramente s„o anunciadas com antecedencia, veja no /bonuscash.\n\n");
+            strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}Quando tem promo√ß√£o de cash?\n");
+            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}As promo√ß√µes raramente s√£o anunciadas com antecedencia, veja no /bonuscash.\n\n");
 
-            strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}Quais os mÈtodos de pagamento que h· no servidor?\n");
-            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}DepÛsito Banc·rio, PagSeguro, PayPal, Mercado Pago, PicPay e PaySafeCard.\n\n");
+            strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}Quais os m√©todos de pagamento que h√° no servidor?\n");
+            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Dep√≥sito Banc√°rio, PagSeguro, PayPal, Mercado Pago, PicPay e PaySafeCard.\n\n");
 
             strcat(MEGAString, "	{49E468}https://brasilnewstart.com.br/forum/index.php?/forum/195-loja-cash-servidor/\n");
 
@@ -219,7 +341,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                 }
                 if(GetPlayerOrg(playerid) == 21)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Seville Boulevard - Portıes *** /ppcc1 /ppcc2");
+                    SendClientMessage(playerid, COLOR_GRAD2, "*** Seville Boulevard - Port√µes *** /ppcc1 /ppcc2");
                 }
                 if(GetPlayerOrg(playerid) == 7)
                 {
@@ -232,7 +354,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                 }
                 if(GetPlayerOrg(playerid) == 12)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** M·fia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
+                    SendClientMessage(playerid, COLOR_GRAD2, "*** M√°fia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
                 }
                 if(GetPlayerOrg(playerid) == 16)
                 {
@@ -246,13 +368,13 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
 
                 if(GetPlayerOrg(playerid) == 24)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** M·fia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** M·fia *** /pcn");
+                    SendClientMessage(playerid, COLOR_GRAD2, "*** M√°fia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
+                    SendClientMessage(playerid, COLOR_GRAD2, "*** M√°fia *** /pcn");
                 }
                 if(GetPlayerOrg(playerid) == 13)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** M·fia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** M·fia *** /pyakuza1 /pyakuza2 /pyakuza3");
+                    SendClientMessage(playerid, COLOR_GRAD2, "*** M√°fia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
+                    SendClientMessage(playerid, COLOR_GRAD2, "*** M√°fia *** /pyakuza1 /pyakuza2 /pyakuza3");
                 }
                 if(GetPlayerOrg(playerid) == 22)
                 {
@@ -260,7 +382,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                 }
                 if (IsACop(playerid))
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** POLICIAIS *** /dp - Para ver todos os Comandos ⁄teis");
+                    SendClientMessage(playerid, COLOR_GRAD2, "*** POLICIAIS *** /dp - Para ver todos os Comandos √öteis");
                 }
                 if(GetPlayerOrg(playerid) == 35)
                 {
@@ -277,14 +399,14 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             return 1;
         }
         case HELP_ORG: {
-            SendClientMessage(playerid, COLOR_GRAD2, "____________________ Ajuda organizaÁ„o ____________________");
+            SendClientMessage(playerid, COLOR_GRAD2, "____________________ Ajuda organiza√ß√£o ____________________");
             if(GetPlayerOrg(playerid) > 0)
             {
                 if(GetPlayerOrg(playerid) == 9)
                 {
                     SendClientMessage(playerid, 0x9C9C9CAA, "/aovivo (id) (valor) {FFFFFF}(Fazer aovivo com outro jogador, por um valor)");
-                    SendClientMessage(playerid, 0x9C9C9CAA, "/noticias (texto da noticia) {FFFFFF}(Fazer noticias que ir· aparecer para todos com noticias ativa)");
-                    SendClientMessage(playerid, 0x9C9C9CAA, "/f {FFFFFF}(Chat da organizaÁ„o) {9C9C9C}/preporter {FFFFFF}(Comando do port„o)");
+                    SendClientMessage(playerid, 0x9C9C9CAA, "/noticias (texto da noticia) {FFFFFF}(Fazer noticias que ir√° aparecer para todos com noticias ativa)");
+                    SendClientMessage(playerid, 0x9C9C9CAA, "/f {FFFFFF}(Chat da organiza√ß√£o) {9C9C9C}/preporter {FFFFFF}(Comando do port√£o)");
                 }
 
                 if(GetPlayerOrg(playerid) == 11)
@@ -294,7 +416,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
 
                 if(GetPlayerOrg(playerid) == 12 || GetPlayerOrg(playerid) == 13 || GetPlayerOrg(playerid) == 24)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** M·fia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
+                    SendClientMessage(playerid, COLOR_GRAD2, "*** M√°fia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
 
                     SendClientMessage(playerid, 0xFFF000AA, "*** CARRO FORTE *** {FFFFFF}/roubarcarroforte");
                 }
@@ -319,7 +441,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                 }
                 if(GetPlayerOrg(playerid) == 21)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Seville Boulevard - Portıes *** /ppcc1 /ppcc2");
+                    SendClientMessage(playerid, COLOR_GRAD2, "*** Seville Boulevard - Port√µes *** /ppcc1 /ppcc2");
                 }
                 if(GetPlayerOrg(playerid) == 7)
                 {
@@ -332,11 +454,11 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                 }
                 if(GetPlayerOrg(playerid) == 24)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** M·fia *** /pcn");
+                    SendClientMessage(playerid, COLOR_GRAD2, "*** M√°fia *** /pcn");
                 }
                 if(GetPlayerOrg(playerid) == 13)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** M·fia *** /pyakuza1 /pyakuza2 /pyakuza3");
+                    SendClientMessage(playerid, COLOR_GRAD2, "*** M√°fia *** /pyakuza1 /pyakuza2 /pyakuza3");
                 }
                 if(GetPlayerOrg(playerid) == 22)
                 {
@@ -349,20 +471,20 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                 }
                 if (IsACop(playerid))
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** POLICIAIS *** /dp - Para ver todos os Comandos ⁄teis");
+                    SendClientMessage(playerid, COLOR_GRAD2, "*** POLICIAIS *** /dp - Para ver todos os Comandos √öteis");
                 }
                 SendClientMessage(playerid, COLOR_LIGHTRED, "*** NOVO COMANDO*** /ang /reforco");
 
                 if (isOrgSeq(playerid))
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** SEQUESTROS *** Sua organizaÁ„o tem permiss„o para fazer sequestros");
+                    SendClientMessage(playerid, COLOR_GRAD2, "*** SEQUESTROS *** Sua organiza√ß√£o tem permiss√£o para fazer sequestros");
                     SendClientMessage(playerid, COLOR_GRAD2, "Comandos: {F0EDED}/sequestrar /refemliberar /arrastarrefem /retirarorgaos /cancelarorgaos /cativeiros");
                 }
 
-                SendClientMessage(playerid, 0x9C9C9CAA, "/localizarcarros {FFFFFF}(Localiza os veÌculos da organizaÁ„o)");
+                SendClientMessage(playerid, 0x9C9C9CAA, "/localizarcarros {FFFFFF}(Localiza os ve√≠culos da organiza√ß√£o)");
 
             } else {
-                SendClientMessage(playerid, -1, "VocÍ n„o pertence a nenhuma organizaÁ„o !");
+                SendClientMessage(playerid, -1, "Voc√™ n√£o pertence a nenhuma organiza√ß√£o !");
             }
 
             SendClientMessage(playerid, COLOR_YELLOW, "*** OUTROS *** /ajudacasa /ajudaaluguel /ajudaempresa /ajudalider");
@@ -379,63 +501,72 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             strcat(MEGAString, "{FFFFFF}Caminhoneiro\n");
             strcat(MEGAString, "{FFFFFF}Gari\n");
             strcat(MEGAString, "{FFFFFF}Taxista\n");
-            strcat(MEGAString, "{FFFFFF}MÈdico\n");
+            strcat(MEGAString, "{FFFFFF}M√©dico\n");
             strcat(MEGAString, "{FFFFFF}Minerador\n");
-            strcat(MEGAString, "{FFFFFF}Mec‚nico\n");
+            strcat(MEGAString, "{FFFFFF}Mec√¢nico\n");
             strcat(MEGAString, "{FFFFFF}Fazendeiro\n");
 
             ShowPlayerDialog(playerid, 80, DIALOG_STYLE_LIST, "{DFD136}Ajuda - Empregos", MEGAString, "Prosseguir", "Cancelar");
         }
         case HELP_HOUSE: {
-            strcat(MEGAString, "\n{F8973F}FunÁıes da casa:\n");
-            strcat(MEGAString, "        {797978}1. {FFFFFF}Alugar para alguÈm.\n");
-            strcat(MEGAString, "        {797978}2. {FFFFFF}Cozinhar em um fog„o.\n");
+            strcat(MEGAString, "\n{F8973F}Fun√ß√µes da casa:\n");
+            strcat(MEGAString, "        {797978}1. {FFFFFF}Alugar para algu√©m.\n");
+            strcat(MEGAString, "        {797978}2. {FFFFFF}Cozinhar em um fog√£o.\n");
             strcat(MEGAString, "        {797978}3. {FFFFFF}Decorar ela ou contratar um Designer de Interiores\n");
-            strcat(MEGAString, "        {FF0000}OBS: {FFFFFF}Estamos desenvolvendo mais funÁıes.\n\n");
+            strcat(MEGAString, "        {FF0000}OBS: {FFFFFF}Estamos desenvolvendo mais fun√ß√µes.\n\n");
 
             strcat(MEGAString, "{F8973F}Comprando uma casa:\n");
-            strcat(MEGAString, "        {797978}1. {FFFFFF}VocÍ pode encontrar casas a venda pelo /gps ª Casas ª Localizar casas a venda.\n");
+            strcat(MEGAString, "        {797978}1. {FFFFFF}Voc√™ pode encontrar casas a venda pelo /gps ¬ª Casas ¬ª Localizar casas a venda.\n");
             strcat(MEGAString, "        {797978}2. {FFFFFF}Use o comando /casa comprar para adquirir uma casa a venda.\n");
-            strcat(MEGAString, "        {797978}3. {FFFFFF}VocÍ precisa ter o nÌvel, dinheiro ou cash necess·rio definido na casa para compra-la.\n\n");
+            strcat(MEGAString, "        {797978}3. {FFFFFF}Voc√™ precisa ter o n√≠vel, dinheiro ou cash necess√°rio definido na casa para compra-la.\n\n");
 
             strcat(MEGAString, "{F8973F}Vendendo uma casa:\n");
-            strcat(MEGAString, "        {797978}1. {FFFFFF}Para vender sua casa, vocÍ precisa anunciar para outros players ou ir atÈ o governo ou uma imobili·ria).\n");
-            strcat(MEGAString, "        {797978}2. {FFFFFF}VocÍ n„o conseguir· vender de imediato, o governo ou a imobili·ria precisa aceitar sua propÛsta.\n\n");
+            strcat(MEGAString, "        {797978}1. {FFFFFF}Para vender sua casa, voc√™ precisa anunciar para outros players ou ir at√© o governo ou uma imobili√°ria).\n");
+            strcat(MEGAString, "        {797978}2. {FFFFFF}Voc√™ n√£o conseguir√° vender de imediato, o governo ou a imobili√°ria precisa aceitar sua prop√≥sta.\n\n");
 
-            strcat(MEGAString, "{F8973F}MÛveis: \n{FFFFFF}Use o comando /moveis ajuda\n\n");
+            strcat(MEGAString, "{F8973F}M√≥veis: \n{FFFFFF}Use o comando /moveis ajuda\n\n");
         }
         case HELP_VEHICLE: {
-            SendClientMessage(playerid, -1, " ");
-            SendClientMessage(playerid, -1, "Algumas informaÁıes:");
-            SendClientMessage(playerid, -1, "Ao comprar um carro, o valor de revenda È {FFFF00}3 vezes menor{FFFFFF} que o preÁo original");
-            SendClientMessage(playerid, -1, "O tunning do carro salva automaticamente, basta ir em alguma loja {FFFF00}TransFender {FFFFFF}e tun·-lo");
-            SendClientMessage(playerid, -1, "Caso vocÍ n„o estacione o carro em algum local, ele ser· salvo na {FFFF00}ultima posiÁ„o {FFFFFF}que foi encontrado");
-            SendClientMessage(playerid, -1, "VocÍ pode ter no m·ximo {FFFF00}5 (Cinco){FFFFFF} carros");
-            SendClientMessage(playerid, -1, "Os carros ser„o criados quando vocÍ logar, e destruidos ao desconectar do servidor");
-            SendClientMessage(playerid, -1, "Comandos que podem ser utilizados:");
-            SendClientMessage(playerid, -1, "/veiculo ajuda | /veiculo comprar | /veiculo revender | /veiculo localizar | /veiculo removertunning");
-            SendClientMessage(playerid, -1, "/veiculo estacionar | /veiculo seguro | /trancar");
-
+            //SendClientMessage(playerid, -1, " ");
+            //SendClientMessage(playerid, -1, "Algumas informa√ß√µes:");
+            //SendClientMessage(playerid, -1, "Ao comprar um carro, o valor de revenda √© {FFFF00}3 vezes menor{FFFFFF} que o pre√ßo original");
+            //SendClientMessage(playerid, -1, "O tunning do carro salva automaticamente, basta ir em alguma loja {FFFF00}TransFender {FFFFFF}e tun√°-lo");
+            //SendClientMessage(playerid, -1, "Caso voc√™ n√£o estacione o carro em algum local, ele ser√° salvo na {FFFF00}ultima posi√ß√£o {FFFFFF}que foi encontrado");
+            //SendClientMessage(playerid, -1, "Voc√™ pode ter no m√°ximo {FFFF00}5 (Cinco){FFFFFF} carros");
+            //SendClientMessage(playerid, -1, "Os carros ser√£o criados quando voc√™ logar, e destruidos ao desconectar do servidor");
+            //SendClientMessage(playerid, -1, "Comandos que podem ser utilizados:");
+            //SendClientMessage(playerid, -1, "/veiculo ajuda | /veiculo comprar | /veiculo revender | /veiculo localizar | /veiculo removertunning");
+            //SendClientMessage(playerid, -1, "/veiculo estacionar | /veiculo seguro | /trancar");
+	    
+	     strcat(MEGAString, "{797978}Como conseguir um carro de concession√°ria?: \n{FFFFFF}Para ir at√© uma concession√°ria utilize o /GPS >> Concession√°rias.\n\n");
+	     
+	     strcat(MEGAString, "{797978}Revenda: \n{FFFFFF}Local onde revende o carro /GPS >> Comercios >> Revendedora & Seguradora.\n\n");
+    	
+            strcat(MEGAString, "{797978}Comandos: \n{FFFFFF}/veiculo ajuda | /veiculo comprar | /veiculo revender | /veiculo localizar | /veiculo removertunning | /veiculo estacionar | /trancar.\n\n");
+            
+            strcat(MEGAString, "{797978}Informa√ß√µes Adicionais: \n{FFFFFF}Caso voc√™ n√£o estacione o carro em algum local, ele ser√° salvo na {FFFF00}ultima posi√ß√£o {FFFFFF}que foi encontrado.\n\n");
+            
+   
             return 1;
         }
         case HELP_VIP: {
-            strcat(MEGAString, "{7D8084}Beneficios do\t{A4CCC3}SÛcio Comum\n");
-            strcat(MEGAString, "{7D8084}Beneficios do\t{DBB960}SÛcio Power\n");
-            strcat(MEGAString, "{7D8084}Beneficios do\t{1EE878}SÛcio Supreme\n");
-            strcat(MEGAString, "{7D8084}Beneficios do\t{DC0139}SÛcio Extreme\n");
+            strcat(MEGAString, "{7D8084}Beneficios do\t{A4CCC3}S√≥cio Comum\n");
+            strcat(MEGAString, "{7D8084}Beneficios do\t{DBB960}S√≥cio Power\n");
+            strcat(MEGAString, "{7D8084}Beneficios do\t{1EE878}S√≥cio Supreme\n");
+            strcat(MEGAString, "{7D8084}Beneficios do\t{DC0139}S√≥cio Extreme\n");
 
             ShowPlayerDialog(playerid, 8742, DIALOG_STYLE_TABLIST, "{DBDCE0}Beneficios", MEGAString, "Ver", "Cancelar");
         }
         case HELP_RADIO: {
             SendClientMessage(playerid, 0xA9A6A6FF, "___________ Ajuda Caixa de Som ___________");
-            SendClientMessage(playerid, -1, "Pegar o r·dio {A9A6A6}(basta clicar em 'usar' no invent·rio)");
-            SendClientMessage(playerid, -1, "/guardarradio {A9A6A6}(para guardar no invent·rio)");
+            SendClientMessage(playerid, -1, "Pegar o r√°dio {A9A6A6}(basta clicar em 'usar' no invent√°rio)");
+            SendClientMessage(playerid, -1, "/guardarradio {A9A6A6}(para guardar no invent√°rio)");
             SendClientMessage(playerid, -1, "/tocarsom {A9A6A6}(para colocar um link para tocar)");
-            SendClientMessage(playerid, -1, "/volumeradio {A9A6A6}(volume do radio de 10 · 120)");
+            SendClientMessage(playerid, -1, "/volumeradio {A9A6A6}(volume do radio de 10 √° 120)");
 
-            SendClientMessage(playerid, 0xFF0000FF, "ObservaÁ„o: {A9A6A6}Para pegar o r·dio do ch„o, aperte ENTER.");
+            SendClientMessage(playerid, 0xFF0000FF, "Observa√ß√£o: {A9A6A6}Para pegar o r√°dio do ch√£o, aperte ENTER.");
             #if !defined LAG_SHOT
-                SendClientMessage(playerid, 0xFF0000FF, "ObservaÁ„o: {A9A6A6}Atire no r·dio para destrui-lo.");
+                SendClientMessage(playerid, 0xFF0000FF, "Observa√ß√£o: {A9A6A6}Atire no r√°dio para destrui-lo.");
             #endif
 
             return 1;
@@ -445,85 +576,85 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Abra seu (/gps), clique em Locais Importantes, depois, Presentes.\n\n");
 
             strcat(MEGAString, "	{DBDCE0}PERGUNTA: {7D8084}Como funciona?\n");
-            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Cada pagamento hor·rio (payday) vocÍ vai buscar seu presente.\n\n");
+            strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Cada pagamento hor√°rio (payday) voc√™ vai buscar seu presente.\n\n");
 
-            strcat(MEGAString, "{FFBB00}Caixa Surpresa Pequena	{7D8084}Conte˙do: {DBDCE0}$25 a $125 e 1 a 2 respeitos\n");
-            strcat(MEGAString, "{FFBB00}Caixa Surpresa MÈdia		{7D8084}Conte˙do: {DBDCE0}$50 a $200 e 1 a 3 respeitos\n");
-            strcat(MEGAString, "{FFBB00}Caixa Surpresa Grande		{7D8084}Conte˙do: {DBDCE0}$80 a $310 e 2 a 5 respeitos\n");
-            strcat(MEGAString, "{FFBB00}Caixa Surpresa Gigante	{7D8084}Conte˙do: {DBDCE0}$120 a $470 e 3 a 6 respeitos\n\n");
+            strcat(MEGAString, "{FFBB00}Caixa Surpresa Pequena	{7D8084}Conte√∫do: {DBDCE0}$25 a $125 e 1 a 2 respeitos\n");
+            strcat(MEGAString, "{FFBB00}Caixa Surpresa M√©dia		{7D8084}Conte√∫do: {DBDCE0}$50 a $200 e 1 a 3 respeitos\n");
+            strcat(MEGAString, "{FFBB00}Caixa Surpresa Grande		{7D8084}Conte√∫do: {DBDCE0}$80 a $310 e 2 a 5 respeitos\n");
+            strcat(MEGAString, "{FFBB00}Caixa Surpresa Gigante	{7D8084}Conte√∫do: {DBDCE0}$120 a $470 e 3 a 6 respeitos\n\n");
 
-            strcat(MEGAString, "{FEE73A}Caixa Surpresa Gold		{7D8084}(uso apenas de jogadores N√O-S”CIO)\n");
-            strcat(MEGAString, "{7D8084}Conte˙do normal: 		{DBDCE0}$600 a $3.000 e 4 a 8 respeitos\n");
-            strcat(MEGAString, "{7D8084}Conte˙do extra: 		{DBDCE0}Um item da loja cash aleatÛrio (use /lojacash)\n");
-            strcat(MEGAString, "{7D8084}Conte˙do extra: 		{DBDCE0}0,001 a 0,100 cash, 1 a 2 dias sÛcio acrescentado\n\n");
+            strcat(MEGAString, "{FEE73A}Caixa Surpresa Gold		{7D8084}(uso apenas de jogadores N√ÉO-S√ìCIO)\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do normal: 		{DBDCE0}$600 a $3.000 e 4 a 8 respeitos\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do extra: 		{DBDCE0}Um item da loja cash aleat√≥rio (use /lojacash)\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do extra: 		{DBDCE0}0,001 a 0,100 cash, 1 a 2 dias s√≥cio acrescentado\n\n");
 
-            strcat(MEGAString, "{556B2F}Caixa Surpresa Org		{7D8084}(ganha na votaÁ„o organizaÁ„o do mÍs)\n");
-            strcat(MEGAString, "{7D8084}Conte˙do normal: 		{DBDCE0}$1.000 a $5.000 e 5 a 12 respeitos e armas aleatÛrias\n");
-            strcat(MEGAString, "{7D8084}Conte˙do extra: 		{DBDCE0}Um item da loja cash aleatÛrio (use /lojacash)\n");
-            strcat(MEGAString, "{7D8084}Conte˙do extra: 		{DBDCE0}0,001 a 0,200 cash, 3 a 6 dias sÛcio acrescentado e laser aleatÛrio\n\n");
+            strcat(MEGAString, "{556B2F}Caixa Surpresa Org		{7D8084}(ganha na vota√ß√£o organiza√ß√£o do m√™s)\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do normal: 		{DBDCE0}$1.000 a $5.000 e 5 a 12 respeitos e armas aleat√≥rias\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do extra: 		{DBDCE0}Um item da loja cash aleat√≥rio (use /lojacash)\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do extra: 		{DBDCE0}0,001 a 0,200 cash, 3 a 6 dias s√≥cio acrescentado e laser aleat√≥rio\n\n");
 
-            strcat(MEGAString, "{1EE878}Caixa Surpresa Supreme		{7D8084}(precisa ser SÛcio Supreme para pegar)\n");
-            strcat(MEGAString, "{7D8084}Conte˙do normal: 		{DBDCE0}$1.000 a $10.000 e 5 a 10 respeitos e armas aleatÛrias\n");
-            strcat(MEGAString, "{7D8084}Conte˙do extra: 		{DBDCE0}Um item da loja cash aleatÛrio (use /lojacash)\n");
-            strcat(MEGAString, "{7D8084}Conte˙do extra: 		{DBDCE0}0,001 a 0,300 cash, 1 a 3 dias sÛcio acrescentado\n");
-            strcat(MEGAString, "{7D8084}Conte˙do raro:			{DBDCE0}O conte˙do raro est· logo abaixo, apenas 1 aleatÛrio\n");
-            strcat(MEGAString, "{EBE2E2}Cerca de Vidro			{DBDCE0}(probabilidade de conseguir 1/15) | {924A7E}…pico\n");
+            strcat(MEGAString, "{1EE878}Caixa Surpresa Supreme		{7D8084}(precisa ser S√≥cio Supreme para pegar)\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do normal: 		{DBDCE0}$1.000 a $10.000 e 5 a 10 respeitos e armas aleat√≥rias\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do extra: 		{DBDCE0}Um item da loja cash aleat√≥rio (use /lojacash)\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do extra: 		{DBDCE0}0,001 a 0,300 cash, 1 a 3 dias s√≥cio acrescentado\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do raro:			{DBDCE0}O conte√∫do raro est√° logo abaixo, apenas 1 aleat√≥rio\n");
+            strcat(MEGAString, "{EBE2E2}Cerca de Vidro			{DBDCE0}(probabilidade de conseguir 1/15) | {924A7E}√âpico\n");
 
-            strcat(MEGAString, "\n{7D8084}P·gina 2:			{00FF00}/infocaixa2\n\n");
+            strcat(MEGAString, "\n{7D8084}P√°gina 2:			{00FF00}/infocaixa2\n\n");
 
             strcat(MEGAString, "{FFF000}____________________________________________________________________________________________________________");
         }
         case HELP_CAIXA2: {
-            strcat(MEGAString, "\n\n{49E468}CAIXAS DISPONÕVEIS:\n\n");
+            strcat(MEGAString, "\n\n{49E468}CAIXAS DISPON√çVEIS:\n\n");
 
-            strcat(MEGAString, "{7D8084}Conte˙do normal: 		{DBDCE0}$10.000 a $20.000 e 15 a 25 respeitos e armas aleatÛrias\n");
-            strcat(MEGAString, "{7D8084}Conte˙do raro:			{86A2CA}1 veÌculo de invent·rio aleatÛrio (exceto Helicopteros, Aviıes, Barcos, Trens)\n");
-            strcat(MEGAString, "{7D8084}InformaÁıes:			{00FF00}Agora possui sacolas extremes com cores prÈ-definidas, exemplo: Sacola Extreme Yellow\n\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do normal: 		{DBDCE0}$10.000 a $20.000 e 15 a 25 respeitos e armas aleat√≥rias\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do raro:			{86A2CA}1 ve√≠culo de invent√°rio aleat√≥rio (exceto Helicopteros, Avi√µes, Barcos, Trens)\n");
+            strcat(MEGAString, "{7D8084}Informa√ß√µes:			{00FF00}Agora possui sacolas extremes com cores pr√©-definidas, exemplo: Sacola Extreme Yellow\n\n");
 
-            strcat(MEGAString, "{FDC945}Sacola de Previsıes		{7D8084}(precisa ter 100+ jogadores, ser nÌvel 10+ e ter menos de 6 cadeias admin)\n");
-            strcat(MEGAString, "{7D8084}Conte˙do normal: 		{DBDCE0}$100.000 a $500.000 e 7 a 12 respeitos\n");
-            strcat(MEGAString, "{7D8084}Conte˙do extra: 		{DBDCE0}Um dos itens da loja cash aleatÛrio\n");
-            strcat(MEGAString, "{7D8084}Conte˙do extra: 		{DBDCE0}0,001 a 0,050 cash, 1 a 2 dias sÛcio acrescentado (se n„o for sÛcio, ser· DIAMANTE)\n\n");
+            strcat(MEGAString, "{FDC945}Sacola de Previs√µes		{7D8084}(precisa ter 100+ jogadores, ser n√≠vel 10+ e ter menos de 6 cadeias admin)\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do normal: 		{DBDCE0}$100.000 a $500.000 e 7 a 12 respeitos\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do extra: 		{DBDCE0}Um dos itens da loja cash aleat√≥rio\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do extra: 		{DBDCE0}0,001 a 0,050 cash, 1 a 2 dias s√≥cio acrescentado (se n√£o for s√≥cio, ser√° DIAMANTE)\n\n");
 
-            strcat(MEGAString, "{D7DF6F}Mochila Premiada		{7D8084}(precisa ter 100+ jogadores, ser nÌvel 10+ e ter menos de 6 cadeias admin)\n");
-            strcat(MEGAString, "{7D8084}Conte˙do normal: 		{DBDCE0}$100.000 a $500.000 e 7 a 12 respeitos\n");
-            strcat(MEGAString, "{7D8084}Conte˙do extra: 		{DBDCE0}Um dos itens da loja cash aleatÛrio\n");
-            strcat(MEGAString, "{7D8084}Conte˙do extra: 		{DBDCE0}0,001 a 0,050 cash, 1 a 2 dias sÛcio acrescentado (se n„o for sÛcio, ser· DIAMANTE)\n\n");
+            strcat(MEGAString, "{D7DF6F}Mochila Premiada		{7D8084}(precisa ter 100+ jogadores, ser n√≠vel 10+ e ter menos de 6 cadeias admin)\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do normal: 		{DBDCE0}$100.000 a $500.000 e 7 a 12 respeitos\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do extra: 		{DBDCE0}Um dos itens da loja cash aleat√≥rio\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do extra: 		{DBDCE0}0,001 a 0,050 cash, 1 a 2 dias s√≥cio acrescentado (se n√£o for s√≥cio, ser√° DIAMANTE)\n\n");
 
-            /*strcat(MEGAString, "{B538C3}Sacola Carnaval		{7D8084}(disponÌvel do dia 17/02/2021 a 25/02/2021)\n");
-            strcat(MEGAString, "{7D8084}Conte˙do normal: 		{DBDCE0}$1.000.000 a $2.000.000 e 5 a 15 respeitos\n");
-            strcat(MEGAString, "{7D8084}Conte˙do extra: 		{DBDCE0}Itens da loja cash aleatÛrio (incluindo Paleta Weak Yellow)\n");
-            strcat(MEGAString, "{7D8084}Conte˙do extra: 		{DBDCE0}1,000 de cash, 3 dias S”CIO-OURO ou acrescenta no seu VIP\n");
-            strcat(MEGAString, "{7D8084}Conte˙do mÈdio:		{DBDCE0}Combat Shotgun (acessÛrio), Cadeira de Rodas (acessÛrio)\n\n");*/
+            /*strcat(MEGAString, "{B538C3}Sacola Carnaval		{7D8084}(dispon√≠vel do dia 17/02/2021 a 25/02/2021)\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do normal: 		{DBDCE0}$1.000.000 a $2.000.000 e 5 a 15 respeitos\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do extra: 		{DBDCE0}Itens da loja cash aleat√≥rio (incluindo Paleta Weak Yellow)\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do extra: 		{DBDCE0}1,000 de cash, 3 dias S√ìCIO-OURO ou acrescenta no seu VIP\n");
+            strcat(MEGAString, "{7D8084}Conte√∫do m√©dio:		{DBDCE0}Combat Shotgun (acess√≥rio), Cadeira de Rodas (acess√≥rio)\n\n");*/
 
             strcat(MEGAString, "{FFF000}____________________________________________________________________________________________________________");
         }
         case HELP_DROGAS: {
-            ShowPlayerDialog(playerid, 0, DIALOG_STYLE_MSGBOX, "InformaÁ„o das Drogas", 
+            ShowPlayerDialog(playerid, 0, DIALOG_STYLE_MSGBOX, "Informa√ß√£o das Drogas", 
                 "{F4E134}Maconha\n\n\
                 {FFFFFF}Consumo: 3 gramas\n\
-                DuraÁ„o: 30 segundos\n\
+                Dura√ß√£o: 30 segundos\n\
                 40% de chance de reduzir o dano causado em 15%\n\
                 70% de chance de reduzir o dano recebido\n\
                 Porcentagens de dano:\n\
                 -> 50% de chance de reduzir 40% do dano recebido\n\
                 -> 20% de chance de reduzir 60% do dano recebido\n\n\
-                {F4E134}CocaÌna\n\n\
+                {F4E134}Coca√≠na\n\n\
                 {FFFFFF}Consumo: 9 gramas\n\
-                DuraÁ„o: 30 segundos\n\
-                80% de chance de aumentar o dano em atÈ 30%\n\n\
+                Dura√ß√£o: 30 segundos\n\
+                80% de chance de aumentar o dano em at√© 30%\n\n\
                 {F4E134}Crack\n\n\
                 {FFFFFF}Consumo: 15 gramas\n\
-                DuraÁ„o: 40 segundos\n\
+                Dura√ß√£o: 40 segundos\n\
                 90% de chance de zerar de 1 a 3 tiros fatais\n\n\n\
-                {F4E134}HeroÌna\n\n\
+                {F4E134}Hero√≠na\n\n\
                 {FFFFFF}Consumo: 10 gramas\n\
-                DuraÁ„o: 2 minutos\n\
+                Dura√ß√£o: 2 minutos\n\
                 Oculta o nick e some do /procurar de todos os jogadores\n\n\n\
                 {F4E134}Metanfetamina\n\n\
                 {FFFFFF}Consumo: 12 gramas\n\
-                DuraÁ„o: 60 segundos\n\
-                20% de chance de n„o sofrer um headshot de sniper\n\
+                Dura√ß√£o: 60 segundos\n\
+                20% de chance de n√£o sofrer um headshot de sniper\n\
                 Minimiza o dano causado em quedas e por fogo", "Fechar", "");
             return 1;
         }
@@ -550,20 +681,20 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         MEGAString[0] = EOS;
 
                         strcat(MEGAString, "\n{FFFFFF}Requisitos para abrir a sacola:\n");
-                        strcat(MEGAString, "    {7D8084}1. {DBDCE0}VocÍ precisa ter 3 slots disponÌveis em seu invent·rio\n");
+                        strcat(MEGAString, "    {7D8084}1. {DBDCE0}Voc√™ precisa ter 3 slots dispon√≠veis em seu invent√°rio\n");
 
-                        strcat(MEGAString, "\n{FFFFFF}Conte˙do da sacola:\n");
-                        strcat(MEGAString, "    {7D8084}VocÍ ganha aleatÛriamente um dos itens abaixo:\n\n");
+                        strcat(MEGAString, "\n{FFFFFF}Conte√∫do da sacola:\n");
+                        strcat(MEGAString, "    {7D8084}Voc√™ ganha aleat√≥riamente um dos itens abaixo:\n\n");
 
                         strcat(MEGAString, "    {4F6CE1}RARO: {DBDCE0}Remington {DBDCE0}(chances: 2/100)\n");
                         strcat(MEGAString, "    {28F236}COMUM: {DBDCE0}Respawn Carros Org\n");
                         strcat(MEGAString, "    {28F236}COMUM: {DBDCE0}Limpar procurado\n");
-                        strcat(MEGAString, "    {28F236}COMUM: {DBDCE0}Blindar veÌculo\n");
+                        strcat(MEGAString, "    {28F236}COMUM: {DBDCE0}Blindar ve√≠culo\n");
                         strcat(MEGAString, "    {28F236}COMUM: {DBDCE0}Ir para HQ\n");
-                        strcat(MEGAString, "    {7F390D}LIXO: {FF0000}Farelos de p„o\n");
+                        strcat(MEGAString, "    {7F390D}LIXO: {FF0000}Farelos de p√£o\n");
 
                         strcat(MEGAString, "\n{FFFFFF}Como ganhar essa sacola?\n");
-                        strcat(MEGAString, "    {00FF00}R: {DBDCE0}VocÍ consegue uma se tiver sorte ao pegar uma caixinha de presente aleatoria.\n");
+                        strcat(MEGAString, "    {00FF00}R: {DBDCE0}Voc√™ consegue uma se tiver sorte ao pegar uma caixinha de presente aleatoria.\n");
 
                         strcat(MEGAString, "{FFF000}____________________________________________________________________________________________________________");
 
@@ -574,21 +705,21 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         MEGAString[0] = EOS;
 
                         strcat(MEGAString, "\n{FFFFFF}Requisitos para abrir a sacola:\n");
-                        strcat(MEGAString, "    {7D8084}1. {DBDCE0}VocÍ precisa ter 3 slots disponÌveis em seu invent·rio\n");
+                        strcat(MEGAString, "    {7D8084}1. {DBDCE0}Voc√™ precisa ter 3 slots dispon√≠veis em seu invent√°rio\n");
 
-                        strcat(MEGAString, "\n{FFFFFF}Conte˙do da sacola:\n");
-                        strcat(MEGAString, "    {7D8084}VocÍ ganha aleatÛriamente um dos itens abaixo:\n\n");
+                        strcat(MEGAString, "\n{FFFFFF}Conte√∫do da sacola:\n");
+                        strcat(MEGAString, "    {7D8084}Voc√™ ganha aleat√≥riamente um dos itens abaixo:\n\n");
 
-                        strcat(MEGAString, "    {DC9315}LEND¡RIO: {DBDCE0}Skin 230 {DBDCE0}(chances: 5/100)\n");
+                        strcat(MEGAString, "    {DC9315}LEND√ÅRIO: {DBDCE0}Skin 230 {DBDCE0}(chances: 5/100)\n");
                         strcat(MEGAString, "    {8E03AB}RARO: {DBDCE0}Skin 134 {DBDCE0}(chances: 10/100)\n");
                         strcat(MEGAString, "    {8E03AB}RARO: {DBDCE0}Skin 137 {DBDCE0}(chances: 10/100)\n");
                         strcat(MEGAString, "    {8E03AB}RARO: {DBDCE0}Skin 212 {DBDCE0}(chances: 10/100)\n");
                         strcat(MEGAString, "    {4F6CE1}COMUM: {DBDCE0}Skin 135 {DBDCE0}(chances: 30/100)\n");
                         strcat(MEGAString, "    {28F236}COMUM: {DBDCE0}Skin 239 {DBDCE0}(chances: 30/100)\n");
-                        strcat(MEGAString, "    {7F390D}LIXO: {FF0000}Farelos de p„o {DBDCE0}(chances: 5/100)\n");
+                        strcat(MEGAString, "    {7F390D}LIXO: {FF0000}Farelos de p√£o {DBDCE0}(chances: 5/100)\n");
 
                         strcat(MEGAString, "\n{FFFFFF}Como ganhar essa sacola?\n");
-                        strcat(MEGAString, "    {00FF00}R: {DBDCE0}Essa sacola est· disponÌvel na /lojacash do servidor.\n");
+                        strcat(MEGAString, "    {00FF00}R: {DBDCE0}Essa sacola est√° dispon√≠vel na /lojacash do servidor.\n");
 
                         strcat(MEGAString, "{FFF000}______________________________________________________________________");
 
@@ -599,15 +730,15 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         MEGAString[0] = EOS;
 
                         strcat(MEGAString, "\n{FFFFFF}Requisitos para abrir a sacola:\n");
-                        strcat(MEGAString, "    {7D8084}1. {DBDCE0}VocÍ precisa ter 3 slots disponÌveis em seu invent·rio\n");
+                        strcat(MEGAString, "    {7D8084}1. {DBDCE0}Voc√™ precisa ter 3 slots dispon√≠veis em seu invent√°rio\n");
 
-                        strcat(MEGAString, "\n{FFFFFF}Conte˙do da sacola:\n");
-                        strcat(MEGAString, "    {7D8084}VocÍ ganha aleatÛriamente um dos itens abaixo:\n\n");
+                        strcat(MEGAString, "\n{FFFFFF}Conte√∫do da sacola:\n");
+                        strcat(MEGAString, "    {7D8084}Voc√™ ganha aleat√≥riamente um dos itens abaixo:\n\n");
 
-                        strcat(MEGAString, "    {DC9315}LEND¡RIO: {DBDCE0}NRG-500 {DBDCE0}(chances: 2/100)\n");
-                        strcat(MEGAString, "    {8E03AB}…PICO: {DBDCE0}FCR-900 {DBDCE0}(chances: 4/100)\n");
-                        strcat(MEGAString, "    {8E03AB}…PICO: {DBDCE0}PCJ-600 {DBDCE0}(chances: 4/100)\n");
-                        strcat(MEGAString, "    {8E03AB}…PICO: {DBDCE0}BF-400 {DBDCE0}(chances: 4/100)\n");
+                        strcat(MEGAString, "    {DC9315}LEND√ÅRIO: {DBDCE0}NRG-500 {DBDCE0}(chances: 2/100)\n");
+                        strcat(MEGAString, "    {8E03AB}√âPICO: {DBDCE0}FCR-900 {DBDCE0}(chances: 4/100)\n");
+                        strcat(MEGAString, "    {8E03AB}√âPICO: {DBDCE0}PCJ-600 {DBDCE0}(chances: 4/100)\n");
+                        strcat(MEGAString, "    {8E03AB}√âPICO: {DBDCE0}BF-400 {DBDCE0}(chances: 4/100)\n");
                         strcat(MEGAString, "    {4F6CE1}RARO: {DBDCE0}Sanchez {DBDCE0}(chances: 8/100)\n");
                         strcat(MEGAString, "    {4F6CE1}RARO: {DBDCE0}Freeway {DBDCE0}(chances: 8/100)\n");
                         strcat(MEGAString, "    {4F6CE1}RARO: {DBDCE0}Quad {DBDCE0}(chances: 8/100)\n");
@@ -615,10 +746,10 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         strcat(MEGAString, "    {28F236}COMUM: {DBDCE0}BMX {DBDCE0}(chances: 10/100)\n");
                         strcat(MEGAString, "    {28F236}COMUM: {DBDCE0}Mountain Bike {DBDCE0}(chances: 10/100)\n");
                         strcat(MEGAString, "    {28F236}COMUM: {DBDCE0}Bike {DBDCE0}(chances: 15/100)\n");
-                        strcat(MEGAString, "    {7F390D}LIXO: {FF0000}Farelos de p„o {DBDCE0}(chances: 5/100)\n");
+                        strcat(MEGAString, "    {7F390D}LIXO: {FF0000}Farelos de p√£o {DBDCE0}(chances: 5/100)\n");
 
                         strcat(MEGAString, "\n{FFFFFF}Como ganhar essa sacola?\n");
-                        strcat(MEGAString, "    {00FF00}R: {DBDCE0}Essa sacola est· disponÌvel na /lojacash do servidor.\n");
+                        strcat(MEGAString, "    {00FF00}R: {DBDCE0}Essa sacola est√° dispon√≠vel na /lojacash do servidor.\n");
 
                         strcat(MEGAString, "{FFF000}______________________________________________________________________");
 
@@ -629,9 +760,9 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         MEGAString[0] = EOS;
 
                         strcat(MEGAString, "{FFFFFF}Como conseguir essa sacola?\n");
-                        strcat(MEGAString, "	{00FF00}R: {9C9C9C}VocÍ precisa adquirir ela na loja de cash (/menu)\n");
+                        strcat(MEGAString, "	{00FF00}R: {9C9C9C}Voc√™ precisa adquirir ela na loja de cash (/menu)\n");
 
-                        strcat(MEGAString, "\n{FFFFFF}Conte˙do da sacola: (Organizado por nÌvel de raridade)\n");
+                        strcat(MEGAString, "\n{FFFFFF}Conte√∫do da sacola: (Organizado por n√≠vel de raridade)\n");
                         strcat(MEGAString, "		{DC9315}1	{9C9C9C}Infernus\n");
                         strcat(MEGAString, "		{DC9315}2	{9C9C9C}Turismo\n");
                         strcat(MEGAString, "		{DC9315}3	{9C9C9C}Bullet\n");
@@ -648,11 +779,11 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         strcat(MEGAString, "		{28F236}14	{9C9C9C}Phoenix\n");
                         strcat(MEGAString, "		{28F236}15	{9C9C9C}Sabre\n");
                         strcat(MEGAString, "		{28F236}16	{9C9C9C}Blista Compact\n");
-                        strcat(MEGAString, "		{7F390D}17	{9C9C9C}Farelos de p„o\n");
+                        strcat(MEGAString, "		{7F390D}17	{9C9C9C}Farelos de p√£o\n");
 
                         strcat(MEGAString, "\n{FFFFFF}Legenda de cores e porcentagem de chance:\n");
-                        strcat(MEGAString, "		{DC9315}Lend·rio	{9C9C9C}(5%)\n");
-                        strcat(MEGAString, "		{8E03AB}…pico	{9C9C9C}(10%)\n");
+                        strcat(MEGAString, "		{DC9315}Lend√°rio	{9C9C9C}(5%)\n");
+                        strcat(MEGAString, "		{8E03AB}√âpico	{9C9C9C}(10%)\n");
                         strcat(MEGAString, "		{4F6CE1}Raro	{9C9C9C}(15%)\n");
                         strcat(MEGAString, "		{28F236}Comum	{9C9C9C}(70%)\n");
                         strcat(MEGAString, "		{7F390D}Lixo	{9C9C9C}(5%)\n");
@@ -666,9 +797,9 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         MEGAString[0] = EOS;
 
                         strcat(MEGAString, "{FFFFFF}Como conseguir essa sacola?\n");
-                        strcat(MEGAString, "	{00FF00}R: {9C9C9C}VocÍ precisa adquirir ela na loja de cash (/menu)\n");
+                        strcat(MEGAString, "	{00FF00}R: {9C9C9C}Voc√™ precisa adquirir ela na loja de cash (/menu)\n");
 
-                        strcat(MEGAString, "\n{FFFFFF}Conte˙do da sacola: (Organizado por nÌvel de raridade)\n");
+                        strcat(MEGAString, "\n{FFFFFF}Conte√∫do da sacola: (Organizado por n√≠vel de raridade)\n");
                         strcat(MEGAString, "		{DC9315}1	{9C9C9C}Sultan\n");
                         strcat(MEGAString, "		{DC9315}2	{9C9C9C}Elegy\n");
 
@@ -706,8 +837,8 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         strcat(MEGAString, "		{7F390D}31	{9C9C9C}Glendale Shit\n");
 
                         strcat(MEGAString, "\n{FFFFFF}Legenda de cores e porcentagem de chance:\n");
-                        strcat(MEGAString, "		{DC9315}Lend·rio	{9C9C9C}(5%)\n");
-                        strcat(MEGAString, "		{8E03AB}…pico		{9C9C9C}(10%)\n");
+                        strcat(MEGAString, "		{DC9315}Lend√°rio	{9C9C9C}(5%)\n");
+                        strcat(MEGAString, "		{8E03AB}√âpico		{9C9C9C}(10%)\n");
                         strcat(MEGAString, "		{4F6CE1}Raro		{9C9C9C}(15%)\n");
                         strcat(MEGAString, "		{28F236}Comum		{9C9C9C}(70%)\n");
                         strcat(MEGAString, "		{7F390D}Lixo		{9C9C9C}(5%)\n");
@@ -721,9 +852,9 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         MEGAString[0] = EOS;
 
                         strcat(MEGAString, "{FFFFFF}Como conseguir essa sacola?\n");
-                        strcat(MEGAString, "	{00FF00}R: {9C9C9C}VocÍ precisa adquirir ela na loja de cash (/menu)\n");
+                        strcat(MEGAString, "	{00FF00}R: {9C9C9C}Voc√™ precisa adquirir ela na loja de cash (/menu)\n");
 
-                        strcat(MEGAString, "\n{FFFFFF}Conte˙do da sacola: (Organizado por nÌvel de raridade)\n");
+                        strcat(MEGAString, "\n{FFFFFF}Conte√∫do da sacola: (Organizado por n√≠vel de raridade)\n");
                         strcat(MEGAString, "		{DC9315}1	{9C9C9C}DFT-30\n");
                         strcat(MEGAString, "		{DC9315}2	{9C9C9C}Tractor\n");
                         strcat(MEGAString, "		{DC9315}3	{9C9C9C}Topfun Van\n");
@@ -756,8 +887,8 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         strcat(MEGAString, "		{7F390D}27	{9C9C9C}Sadler Shit\n");
 
                         strcat(MEGAString, "\n{FFFFFF}Legenda de cores e porcentagem de chance:\n");
-                        strcat(MEGAString, "		{DC9315}Lend·rio	{9C9C9C}(5%)\n");
-                        strcat(MEGAString, "		{8E03AB}…pico		{9C9C9C}(10%)\n");
+                        strcat(MEGAString, "		{DC9315}Lend√°rio	{9C9C9C}(5%)\n");
+                        strcat(MEGAString, "		{8E03AB}√âpico		{9C9C9C}(10%)\n");
                         strcat(MEGAString, "		{4F6CE1}Raro		{9C9C9C}(15%)\n");
                         strcat(MEGAString, "		{28F236}Comum		{9C9C9C}(70%)\n");
                         strcat(MEGAString, "		{7F390D}Lixo		{9C9C9C}(5%)\n");
@@ -771,9 +902,9 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         MEGAString[0] = EOS;
 
                         strcat(MEGAString, "{FFFFFF}Como conseguir essa sacola?\n");
-                        strcat(MEGAString, "	{00FF00}R: {9C9C9C}VocÍ precisa adquirir ela na loja de cash (/menu)\n");
+                        strcat(MEGAString, "	{00FF00}R: {9C9C9C}Voc√™ precisa adquirir ela na loja de cash (/menu)\n");
 
-                        strcat(MEGAString, "\n{FFFFFF}Conte˙do da sacola: (Organizado por nÌvel de raridade)\n");
+                        strcat(MEGAString, "\n{FFFFFF}Conte√∫do da sacola: (Organizado por n√≠vel de raridade)\n");
                         strcat(MEGAString, "		{DC9315}1	{9C9C9C}Shamal\n");
                         strcat(MEGAString, "		{DC9315}2	{9C9C9C}Rustler\n");
 
@@ -785,7 +916,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         strcat(MEGAString, "		{28F236}7	{9C9C9C}Dodo\n");
 
                         strcat(MEGAString, "\n{FFFFFF}Legenda de cores e porcentagem de chance:\n");
-                        strcat(MEGAString, "		{DC9315}Lend·rio	{9C9C9C}(5%)\n");
+                        strcat(MEGAString, "		{DC9315}Lend√°rio	{9C9C9C}(5%)\n");
                         strcat(MEGAString, "		{4F6CE1}Raro		{9C9C9C}(20%)\n");
                         strcat(MEGAString, "		{28F236}Comum		{9C9C9C}(75%)\n");
 
@@ -808,82 +939,72 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             return SendClientMessage(playerid, -1, "Leia as regras no /forum do servidor.");
         }
         case HELP_ALUGUEL: {
-            strcat(MEGAString, "{797978}Funcionamento: \n{FFFFFF}VocÍ poder· ter um inquilino em sua casa, vocÍ n„o poder· mais morar nela enquanto tiver alugada.\n\n");
+            strcat(MEGAString, "{797978}Funcionamento: \n{FFFFFF}Voc√™ poder√° ter um inquilino em sua casa, voc√™ n√£o poder√° mais morar nela enquanto tiver alugada.\n\n");
     	
-            strcat(MEGAString, "{797978}Permitindo aluguel: \n{FFFFFF}VocÍ usa o comando /aluguel permissao para definir se a casa est· para alugar ou n„o.\n\n");
+            strcat(MEGAString, "{797978}Permitindo aluguel: \n{FFFFFF}Voc√™ usa o comando /aluguel permissao para definir se a casa est√° para alugar ou n√£o.\n\n");
             
-            strcat(MEGAString, "{797978}Valor do aluguel: \n{FFFFFF}VocÍ pode definir um valor de $200 a $1.000 que seu inquilino vai pagar por Payday que ele estiver online.\n\n");
+            strcat(MEGAString, "{797978}Valor do aluguel: \n{FFFFFF}Voc√™ pode definir um valor de $200 a $1.000 que seu inquilino vai pagar por Payday que ele estiver online.\n\n");
             
-            strcat(MEGAString, "{797978}Despejando: \n{FFFFFF}VocÍ poder· despejar o seu inquilino quando quiser!\n");
-            //strcat(MEGAString, "        {797978}1. {FFFFFF}O jogador esteve ativo por 1 hora no dia anterior, caso despejar, perder· -50 de reputaÁ„o Empreendedor.\n");
-            strcat(MEGAString, "        {797978}1. {FFFFFF}O jogador est· online no momento, caso despejar, perder· -60 de reputaÁ„o Empreendedor.\n");
+            strcat(MEGAString, "{797978}Despejando: \n{FFFFFF}Voc√™ poder√° despejar o seu inquilino quando quiser!\n");
+            //strcat(MEGAString, "        {797978}1. {FFFFFF}O jogador esteve ativo por 1 hora no dia anterior, caso despejar, perder√° -50 de reputa√ß√£o Empreendedor.\n");
+            strcat(MEGAString, "        {797978}1. {FFFFFF}O jogador est√° online no momento, caso despejar, perder√° -60 de reputa√ß√£o Empreendedor.\n");
         }
-
-        // Como pegar um emprego
-        case HELP_PRIMEIROS_PASSOS: {
-
-            strcat(MEGAString, "Como pegar um emprego?\n");
-    	
-            return ShowPlayerDialog(playerid, DIALOG_ID_HELP_CP, DIALOG_STYLE_LIST, "Primeiros passos:", MEGAString, "Fechar", "");
-        }
-
-        // Como pegar um emprego
-        case OPC_01_PRIMEIROS_PASSOS: {
-
-            // Ativa um checkpoint:
-            // playerid, x, y, z, tamanho;
-            SetPlayerCheckpoint(playerid, 0.0, 0.0, 0.0, 5.0);
-    	
-            return 1;
-        }
-    }
-    ShowPlayerDialog(playerid, 0, DIALOG_STYLE_MSGBOX, title_help, MEGAString, "Fechar", "");
-
-    return 1;
-}
 
 hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[]) 
 {
     if (dialogid == DIALOG_ID_HELP)
 	{
 	    if (!response) 
-            return SendClientMessage(playerid, -1, "VocÍ fechou o menu de ajuda.");
+            return SendClientMessage(playerid, -1, "Voc√™ fechou o menu de ajuda.");
 
         switch (listitem)
 		{
-            case 0: Help_List(playerid, HELP_ATUALIZACAO);
-            case 1: Help_List(playerid, HELP_FORUM);
-            case 2: Help_List(playerid, HELP_DISCORD);
-            case 3: Help_List(playerid, HELP_COMPRAR_CASH, "Ajuda comprar cash");
-			case 4: cmd_rg(playerid);
-			case 5: Help_List(playerid, HELP_GERAL);
-			case 6: Help_List(playerid, HELP_ORG, "Ajuda organizaÁ„o");
-			case 7: Help_List(playerid, HELP_EMPREGO, "Ajuda emprego");
-			case 8: Help_List(playerid, HELP_CELULAR, "Ajuda celular");
-			case 9: Help_List(playerid, HELP_HOUSE, "{797978}Ajuda casa");
-			case 10: Help_List(playerid, HELP_PROPRIEDADES);
-			case 11: Help_List(playerid, HELP_VEHICLE);
-			case 12: Help_List(playerid, HELP_REGRAS);
-			case 13: Help_List(playerid, HELP_COZINHA, "Ajuda cozinha");
-			case 14: Help_List(playerid, HELP_ALUGUEL);
-			case 15: Help_List(playerid, HELP_LIDER, "Ajuda lÌder");
-			case 16: cmd_gps(playerid);
-			case 17: Help_List(playerid, HELP_VIP);
-			case 18: Help_List(playerid, HELP_RADIO);
-			case 19: Help_List(playerid, HELP_FAZENDA, "Ajuda Fazenda");
-			case 20: Help_List(playerid, HELP_CAIXA);
-			case 21: Help_List(playerid, HELP_DROGAS);
+                        case 0: Help_List(playerid, HELP_PRIMEIROS_PASSOS);
+			case 1: Help_List(playerid, HELP_NEGOCIAR);
+                        case 2: Help_List(playerid, HELP_ATUALIZACAO);
+                        case 3: Help_List(playerid, HELP_FORUM);
+                        case 4: Help_List(playerid, HELP_DISCORD);
+                        case 5: Help_List(playerid, HELP_COMPRAR_CASH, "Ajuda comprar cash");
+			case 6: cmd_rg(playerid);
+			case 7: Help_List(playerid, HELP_GERAL);
+			case 8: Help_List(playerid, HELP_ATENDIMENTO);
+			case 9: Help_List(playerid, HELP_ORG, "Ajuda organiza√ß√£o");
+			case 10: Help_List(playerid, HELP_EMPREGO, "Ajuda emprego");
+			case 11: Help_List(playerid, HELP_CELULAR, "Ajuda celular");
+			case 12: Help_List(playerid, HELP_HOUSE, "{797978}Ajuda casa");
+			case 13: Help_List(playerid, HELP_PROPRIEDADES);
+			case 14: Help_List(playerid, HELP_VEHICLE);
+			case 15: Help_List(playerid, HELP_REGRAS);
+			case 16: Help_List(playerid, HELP_COZINHA, "Ajuda cozinha");
+			case 17: Help_List(playerid, HELP_ALUGUEL);
+			case 18: Help_List(playerid, HELP_LIDER, "Ajuda l√≠der");
+			case 19: cmd_gps(playerid);
+			case 20: Help_List(playerid, HELP_VIP);
+			case 21: Help_List(playerid, HELP_RADIO);
+			case 22: Help_List(playerid, HELP_FAZENDA, "Ajuda Fazenda");
+			case 23: Help_List(playerid, HELP_CAIXA);
+			case 24: Help_List(playerid, HELP_DROGAS);
+			case 25: Help_List(playerid, HELP_VIRAR_LIDER)
+                        case 26: Help_List(playerid, HELP_GIFT_CARD)
+                        case 27: Help_List(playerid, HELP_ENTRAR_ORG)
+                        case 28: Help_List(playerid, HELP_FOME_SEDE)
+                        case 29: Help_List(playerid, HELP_VIRAR_VIP)
+                        case 30: Help_List(playerid, HELP_CONSEGUIR_ARMA)
+                        case 31: Help_List(playerid, HELP_TROCAR_NICK)
 		}
 	    return 1;
 	}
     else if (dialogid == DIALOG_ID_HELP_CP)
 	{
 	    if (!response) 
-            return SendClientMessage(playerid, -1, "VocÍ fechou o menu de ajuda.");
+            return SendClientMessage(playerid, -1, "Voc√™ fechou o menu de ajuda.");
 
         switch (listitem)
 		{
             case 0: Help_List(playerid, OPC_01_PRIMEIROS_PASSOS);
+	      case 1: Help_List(playerid, OPC_02_PRIMEIROS_PASSOS);
+	        case 2: Help_List(playerid, OPC_03_PRIMEIROS_PASSOS);
+		  case 0: Help_List(playerid, OPC_04_PRIMEIROS_PASSOS);
 		}
 	    return 1;
 	}
