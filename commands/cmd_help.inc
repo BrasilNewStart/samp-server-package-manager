@@ -50,36 +50,37 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
         case 0: {
             strcat(MEGAString, " {00FF00}» {00FF00}Iniciantes {00FA9A}» Primeiros passos\n");
             strcat(MEGAString, " {00FF00}» {00FF00}Segurança {00FA9A}» Como fazer uma venda/troca segura\n");
+            strcat(MEGAString, " {00FF00}» {00FF00}Importante {FFFFFF}» Regras do Servidor\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Atualizações\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Fórum\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Discord\n");
-            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Comprar Cash\n");
-            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Documentos\n");
+            strcat(MEGAString, " {FFFFFF}» {FFFF00}MOEDA VIP {FFFF00}» Comprar Cash\n");
+            strcat(MEGAString, " {FFFFFF}» {00AAFF}Meu RG {FFFFFF}» Documentos\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Comandos em Geral\n");
 	        strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Como pedir ajuda administrativa\n");
+            strcat(MEGAString, " {FFFFFF}» {DC143C}Lider {FF00FF}» Como virar um líder\n");
+            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Comprar Cash com GIFT CARD\n");
+            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Como entrar em uma organização Policial e Criminosa\n");
+            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Como beber água e comer alguma coisa\n");
+            strcat(MEGAString, " {FFFFFF}» {FFFF00}VIP   {FFFF00}» Como virar VIP\n");
+            strcat(MEGAString, " {FFFFFF}» {FFFF00}VIP   {FFFF00}» Benefícios de Sócios\n");
+            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Como conseguir uma arma\n");
+            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Como trocar o meu nick\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Organização\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Empregos\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Celular\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Casas\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Empresas\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Carros\n");
-            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Regras\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Cozinha\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Aluguel\n");
-            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Líder\n");
+            strcat(MEGAString, " {FFFFFF}» {DC143C}Ajuda {FFFFFF}» Líder\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» GPS\n");
-            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Benefícios de Sócios\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» JBL\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Fazendas\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Caixas Surpresa\n");
             strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FFFFFF}» Drogas\n");
-	        strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {FF00FF}» Como virar um líder\n");
-            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Comprar Cash com GIFT CARD\n");
-            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Como entrar em uma organização Policial e Criminosa\n");
-            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Como beber água e comer alguma coisa\n");
-            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Como virar VIP\n");
-            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Como conseguir uma arma\n");
-            strcat(MEGAString, " {FFFFFF}» {00AAFF}Ajuda {00FF00}» Como trocar o meu nick\n");
+	      
 
             return ShowPlayerDialog(playerid, DIALOG_ID_HELP, DIALOG_STYLE_LIST, "{FFFFFF}» {00AAFF}Ajuda do Servidor", MEGAString, "Selecionar", "Cancelar");
         }
@@ -499,6 +500,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             strcat(MEGAString, "        {FF0000}OBS: {FFFFFF}Estamos desenvolvendo mais funções.\n\n");
 
             strcat(MEGAString, "{F8973F}Comprando uma casa:\n");
+             strcat(MEGAString, "       {FF0000}ATENÇÃO {00FA9A}APÓS COMPRAR A CASA, PAGUE AS DÍVIDAS NA LOTÉRICA MAIS PRÓXIMA, CASO CONTRÁRIO IRÁ PERDER CASA.\n");
             strcat(MEGAString, "        {797978}1. {FFFFFF}Você pode encontrar casas a venda pelo /gps » Casas » Localizar casas a venda.\n");
             strcat(MEGAString, "        {797978}2. {FFFFFF}Use o comando /casa comprar para adquirir uma casa a venda.\n");
             strcat(MEGAString, "        {797978}3. {FFFFFF}Você precisa ter o nível, dinheiro ou cash necessário definido na casa para compra-la.\n\n");
@@ -506,6 +508,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             strcat(MEGAString, "{F8973F}Vendendo uma casa:\n");
             strcat(MEGAString, "        {797978}1. {FFFFFF}Para vender sua casa, você precisa anunciar para outros players ou ir até o governo ou uma imobiliária).\n");
             strcat(MEGAString, "        {797978}2. {FFFFFF}Você não conseguirá vender de imediato, o governo ou a imobiliária precisa aceitar sua propósta.\n\n");
+            strcat(MEGAString, "        {FF0000}/casa Vender. {00FA9A}Quando você utilizar o comando /casa vender irá vir a METADE do valor da casa.\n\n");
 
             strcat(MEGAString, "{F8973F}Móveis: \n{FFFFFF}Use o comando /moveis ajuda\n\n");
         }
@@ -559,8 +562,8 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Cada pagamento horário (payday) você vai buscar seu presente.\n\n");
 
             strcat(MEGAString, "{FFBB00}Caixa Surpresa Pequena	{7D8084}Conteúdo: {DBDCE0}$25 a $125 e 1 a 2 respeitos\n");
-            strcat(MEGAString, "{FFBB00}Caixa Surpresa Média		{7D8084}Conteúdo: {DBDCE0}$50 a $200 e 1 a 3 respeitos\n");
-            strcat(MEGAString, "{FFBB00}Caixa Surpresa Grande		{7D8084}Conteúdo: {DBDCE0}$80 a $310 e 2 a 5 respeitos\n");
+            strcat(MEGAString, "{FFBB00}Caixa Surpresa Média	{7D8084}Conteúdo: {DBDCE0}$50 a $200 e 1 a 3 respeitos\n");
+            strcat(MEGAString, "{FFBB00}Caixa Surpresa Grande	{7D8084}Conteúdo: {DBDCE0}$80 a $310 e 2 a 5 respeitos\n");
             strcat(MEGAString, "{FFBB00}Caixa Surpresa Gigante	{7D8084}Conteúdo: {DBDCE0}$120 a $470 e 3 a 6 respeitos\n\n");
 
             strcat(MEGAString, "{FEE73A}Caixa Surpresa Gold		{7D8084}(uso apenas de jogadores NÃO-SÓCIO)\n");
@@ -944,36 +947,37 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 		{
             case 0: Help_List(playerid, HELP_PRIMEIROS_PASSOS);
 			case 1: Help_List(playerid, HELP_NEGOCIAR);
-            case 2: Help_List(playerid, HELP_ATUALIZACAO);
-            case 3: Help_List(playerid, HELP_FORUM);
-            case 4: Help_List(playerid, HELP_DISCORD);
-            case 5: Help_List(playerid, HELP_COMPRAR_CASH, "Ajuda comprar cash");
-			case 6: cmd_rg(playerid);
-			case 7: Help_List(playerid, HELP_GERAL);
-			case 8: Help_List(playerid, HELP_ATENDIMENTO);
-			case 9: Help_List(playerid, HELP_ORG, "Ajuda organização");
-			case 10: Help_List(playerid, HELP_EMPREGO, "Ajuda emprego");
-			case 11: Help_List(playerid, HELP_CELULAR, "Ajuda celular");
-			case 12: Help_List(playerid, HELP_HOUSE, "{797978}Ajuda casa");
-			case 13: Help_List(playerid, HELP_PROPRIEDADES);
-			case 14: Help_List(playerid, HELP_VEHICLE);
-			case 15: Help_List(playerid, HELP_REGRAS);
-			case 16: Help_List(playerid, HELP_COZINHA, "Ajuda cozinha");
-			case 17: Help_List(playerid, HELP_ALUGUEL);
-			case 18: Help_List(playerid, HELP_LIDER, "Ajuda líder");
-			case 19: cmd_gps(playerid);
-			case 20: Help_List(playerid, HELP_VIP);
-			case 21: Help_List(playerid, HELP_RADIO);
-			case 22: Help_List(playerid, HELP_FAZENDA, "Ajuda Fazenda");
-			case 23: Help_List(playerid, HELP_CAIXA);
-			case 24: Help_List(playerid, HELP_DROGAS);
-			case 25: Help_List(playerid, HELP_VIRAR_LIDER);
-            case 26: Help_List(playerid, HELP_GIFT_CARD);
-            case 27: Help_List(playerid, HELP_ENTRAR_ORG);
-            case 28: Help_List(playerid, HELP_FOME_SEDE);
-            case 29: Help_List(playerid, HELP_VIRAR_VIP);
-            case 30: Help_List(playerid, HELP_CONSEGUIR_ARMA);
-            case 31: Help_List(playerid, HELP_TROCAR_NICK);
+            case 2: Help_List(playerid, HELP_REGRAS);
+            case 3: Help_List(playerid, HELP_ATUALIZACAO);
+            case 4: Help_List(playerid, HELP_FORUM);
+            case 5: Help_List(playerid, HELP_DISCORD);
+            case 6: Help_List(playerid, HELP_COMPRAR_CASH, "Ajuda comprar cash");
+			case 7: cmd_rg(playerid);
+			case 8: Help_List(playerid, HELP_GERAL);
+			case 9: Help_List(playerid, HELP_ATENDIMENTO);
+            case 10: Help_List(playerid, HELP_VIRAR_LIDER);
+            case 11: Help_List(playerid, HELP_GIFT_CARD);
+            case 12: Help_List(playerid, HELP_ENTRAR_ORG);
+            case 13: Help_List(playerid, HELP_FOME_SEDE);
+            case 14: Help_List(playerid, HELP_VIRAR_VIP);
+            case 15: Help_List(playerid, HELP_VIP);
+            case 16: Help_List(playerid, HELP_CONSEGUIR_ARMA);
+            case 17: Help_List(playerid, HELP_TROCAR_NICK);
+			case 18: Help_List(playerid, HELP_ORG, "Ajuda organização");
+			case 19: Help_List(playerid, HELP_EMPREGO, "Ajuda emprego");
+			case 20: Help_List(playerid, HELP_CELULAR, "Ajuda celular");
+			case 21: Help_List(playerid, HELP_HOUSE, "{797978}Ajuda casa");
+			case 22: Help_List(playerid, HELP_PROPRIEDADES);
+			case 23: Help_List(playerid, HELP_VEHICLE);
+			case 24: Help_List(playerid, HELP_COZINHA, "Ajuda cozinha");
+			case 25: Help_List(playerid, HELP_ALUGUEL);
+			case 26: Help_List(playerid, HELP_LIDER, "Ajuda líder");
+			case 27: cmd_gps(playerid);
+			case 28: Help_List(playerid, HELP_RADIO);
+			case 29: Help_List(playerid, HELP_FAZENDA, "Ajuda Fazenda");
+			case 30: Help_List(playerid, HELP_CAIXA);
+			case 31: Help_List(playerid, HELP_DROGAS);
+			
 		}
 	    return 1;
 	}
