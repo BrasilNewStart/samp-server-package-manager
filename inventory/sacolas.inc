@@ -11,6 +11,7 @@
 #define MODEL_SACOLA_VEHICLE_NEW_YEAR 19059
 #define MODEL_SACOLA_ACC_ORBES 19060
 #define MODEL_SACOLA_VEHICLE_CARNAVAL 1504
+#define MODEL_SACOLA_VEHICLE_GARANTIA_LENDARIO 541
 
 new VehiclesName[212][] =
 {
@@ -802,6 +803,21 @@ stock OpenSacola(playerid, sacolamodel)
 					new srand = random(sizeof(Comuns));
 					format(premio_name, sizeof(premio_name), "{28F236}%s", VehiclesName[Comuns[srand] - 400]);
 					givePlayerItem(playerid, ITEM_TYPE_DRONE, Comuns[srand], 1, VehiclesName[Comuns[srand] - 400], 226, 226);
+				}
+			}
+		}
+		case MODEL_SACOLA_VEHICLE_GARANTIA_LENDARIO:
+		{
+			format(sacola_name, sizeof(sacola_name), "{FFFF00}Sacola de Veiculos {FFFF00}Garantia Lendário");
+
+			static const Lendarios[] = {522, 494, 541, 562, 462};
+			
+			{
+				// Objeto lendário (100%)
+				{
+					new srand = random(sizeof(Lendarios));
+					format(premio_name, sizeof(premio_name), "{DC9315}%s", VehiclesName[Lendarios[srand] - 400]);
+					givePlayerItem(playerid, ITEM_TYPE_DRONE, Lendarios[srand], 1, VehiclesName[Lendarios[srand] - 400], 0, 0);
 				}
 			}
 		}
