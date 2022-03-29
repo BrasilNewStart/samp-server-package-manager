@@ -70,7 +70,7 @@ stock OpenSacola(playerid, sacolamodel)
 				// Objeto impossivel (5%)
 				default: 
 				{
-					format(premio_name, sizeof(premio_name), "{FF0000}Farelos de p√£o");
+					format(premio_name, sizeof(premio_name), "{FF0000}Farelos de p„o");
 
 					givePlayerItem(playerid, ITEM_TYPE_LIXO, 19883, 1, "Farelos de pao");
 				}
@@ -117,7 +117,7 @@ stock OpenSacola(playerid, sacolamodel)
 				// Objeto impossivel (5%)
 				default: 
 				{
-					format(premio_name, sizeof(premio_name), "{FF0000}Farelos de p√£o");
+					format(premio_name, sizeof(premio_name), "{FF0000}Farelos de p„o");
 
 					givePlayerItem(playerid, ITEM_TYPE_LIXO, 19883, 1, "Farelos de pao");
 				}
@@ -164,7 +164,7 @@ stock OpenSacola(playerid, sacolamodel)
 				// Objeto impossivel (5%)
 				default: 
 				{
-					format(premio_name, sizeof(premio_name), "{FF0000}Farelos de p√£o");
+					format(premio_name, sizeof(premio_name), "{FF0000}Farelos de p„o");
 
 					givePlayerItem(playerid, ITEM_TYPE_LIXO, 19883, 1, "Farelos de pao");
 				}
@@ -176,25 +176,25 @@ stock OpenSacola(playerid, sacolamodel)
 
 			switch (rand)
 			{
-				// Objeto lend√°rio (5%)
+				// Objeto lend·rio (5%)
 				case 0..4: 
 				{
 					format(premio_name, sizeof(premio_name), "{DC9315}Skin 230");
 					givePlayerItem(playerid, ITEM_TYPE_SKIN, 230, 1, "Skin 230", 0, 0);
 				}
-				// Objeto √©pico (10%)
+				// Objeto Èpico (10%)
 				case 5..14: 
 				{
 					format(premio_name, sizeof(premio_name), "{8E03AB}Skin 134");
 					givePlayerItem(playerid, ITEM_TYPE_SKIN, 134, 1, "Skin 134", 0, 0);
 				}
-				// Objeto √©pico (10%)
+				// Objeto Èpico (10%)
 				case 15..24: 
 				{
 					format(premio_name, sizeof(premio_name), "{8E03AB}Skin 137");
 					givePlayerItem(playerid, ITEM_TYPE_SKIN, 137, 1, "Skin 137", 0, 0);
 				}
-				// Objeto √©pico (10%)
+				// Objeto Èpico (10%)
 				case 25..34: 
 				{
 					format(premio_name, sizeof(premio_name), "{8E03AB}Skin 212");
@@ -215,7 +215,7 @@ stock OpenSacola(playerid, sacolamodel)
 				// Objeto impossivel (5%)
 				default: 
 				{
-					format(premio_name, sizeof(premio_name), "{FF0000}Farelos de p√£o");
+					format(premio_name, sizeof(premio_name), "{FF0000}Farelos de p„o");
 					givePlayerItem(playerid, ITEM_TYPE_LIXO, 19883, 1, "Farelos de pao");
 				}
 			}
@@ -226,28 +226,28 @@ stock OpenSacola(playerid, sacolamodel)
 
 			switch (rand)
 			{
-				// Objeto lend√°rio (2%)
+				// Objeto lend·rio (2%)
 				case 2, 3: 
 				{
 					format(premio_name, sizeof(premio_name), "{DC9315}NRG-500");
 
 					givePlayerItem(playerid, ITEM_TYPE_DRONE, 522, 1, "NRG-500", 0, 0);
 				}
-				// Objeto √©pico (4%)
+				// Objeto Èpico (4%)
 				case 7..10: 
 				{
 					format(premio_name, sizeof(premio_name), "{8E03AB}FCR-900");
 
 					givePlayerItem(playerid, ITEM_TYPE_DRONE, 521, 1, "FCR-900", 0, 0);
 				}
-				// Objeto √©pico (4%)
+				// Objeto Èpico (4%)
 				case 11, 15: 
 				{
 					format(premio_name, sizeof(premio_name), "{8E03AB}PCJ-600");
 
 					givePlayerItem(playerid, ITEM_TYPE_DRONE, 461, 1, "PCJ-600", 0, 0);
 				}
-				// Objeto √©pico (4%)
+				// Objeto Èpico (4%)
 				case 16..20: 
 				{
 					format(premio_name, sizeof(premio_name), "{8E03AB}BF-400");
@@ -313,7 +313,7 @@ stock OpenSacola(playerid, sacolamodel)
 				// Objeto impossivel (5%)
 				default: 
 				{
-					format(premio_name, sizeof(premio_name), "{FF0000}Farelos de p√£o");
+					format(premio_name, sizeof(premio_name), "{FF0000}Farelos de p„o");
 
 					givePlayerItem(playerid, ITEM_TYPE_LIXO, 19883, 1, "Farelos de pao");
 				}
@@ -325,7 +325,7 @@ stock OpenSacola(playerid, sacolamodel)
 
 			switch (rand)
 			{
-				// Objeto lend√°rio (5%)
+				// Objeto lend·rio (5%)
 				case 1..5: 
 				{
 					new srand = random(3);
@@ -346,7 +346,7 @@ stock OpenSacola(playerid, sacolamodel)
 						givePlayerItem(playerid, ITEM_TYPE_DRONE, 541, 1, "Bullet", 0, 0);
 					}
 				}
-				// Objeto √©pico (10%)
+				// Objeto Èpico (10%)
 				case 6..16: 
 				{
 					new srand = random(3);
@@ -432,7 +432,7 @@ stock OpenSacola(playerid, sacolamodel)
 				// Objeto impossivel (2%)
 				default: 
 				{
-					format(premio_name, sizeof(premio_name), "{FF0000}Farelos de p√£o");
+					format(premio_name, sizeof(premio_name), "{FF0000}Farelos de p„o");
 					givePlayerItem(playerid, ITEM_TYPE_LIXO, 19883, 1, "Farelos de pao");
 				}
 			}
@@ -443,7 +443,7 @@ stock OpenSacola(playerid, sacolamodel)
 
 			switch (rand)
 			{
-				// Objeto lend√°rio (5%)
+				// Objeto lend·rio (5%)
 				case 1..5: 
 				{
 					new srand = random(2);
@@ -459,7 +459,7 @@ stock OpenSacola(playerid, sacolamodel)
 						givePlayerItem(playerid, ITEM_TYPE_DRONE, 562, 1, "Elegy", 0, 0);
 					}
 				}
-				// Objeto √©pico (10%)
+				// Objeto Èpico (10%)
 				case 6..16: 
 				{
 					new srand = random(5);
@@ -636,14 +636,14 @@ stock OpenSacola(playerid, sacolamodel)
 
 			switch (rand)
 			{
-				// Objeto lend√°rio (5%)
+				// Objeto lend·rio (5%)
 				case 1..5: 
 				{
 					new srand = random(sizeof(Lendarios));
 					format(premio_name, sizeof(premio_name), "{DC9315}%s", VehiclesName[Lendarios[srand] - 400]);
 					givePlayerItem(playerid, ITEM_TYPE_DRONE, Lendarios[srand], 1, VehiclesName[Lendarios[srand] - 400], 0, 0);
 				}
-				// Objeto √©pico (10%)
+				// Objeto Èpico (10%)
 				case 6..16: 
 				{
 					new srand = random(sizeof(Epicos));
@@ -682,7 +682,7 @@ stock OpenSacola(playerid, sacolamodel)
 
 			switch (rand)
 			{
-				// Objeto lend√°rio (5%)
+				// Objeto lend·rio (5%)
 				case 1..5: 
 				{
 					new srand = random(sizeof(Lendarios));
@@ -715,7 +715,7 @@ stock OpenSacola(playerid, sacolamodel)
 
 			switch (rand)
 			{
-				// Objeto lend√°rio (4%)
+				// Objeto lend·rio (4%)
 				case 1..5: 
 				{
 					new srand = random(sizeof(Lendarios));
@@ -750,7 +750,7 @@ stock OpenSacola(playerid, sacolamodel)
 
 			switch (rand)
 			{
-				// Objeto lend√°rio (4%)
+				// Objeto lend·rio (4%)
 				case 1..5: 
 				{
 					new srand = random(sizeof(Lendarios));
@@ -783,7 +783,7 @@ stock OpenSacola(playerid, sacolamodel)
 
 			switch (rand)
 			{
-				// Objeto lend√°rio (3%)
+				// Objeto lend·rio (3%)
 				case 1..5: 
 				{
 					new srand = random(sizeof(Lendarios));
@@ -808,12 +808,12 @@ stock OpenSacola(playerid, sacolamodel)
 		}
 		case MODEL_SACOLA_VEHICLE_GARANTIA_LENDARIO:
 		{
-			format(sacola_name, sizeof(sacola_name), "{FFFF00}Sacola de Veiculos {FFFF00}Garantia Lend√°rio");
+			format(sacola_name, sizeof(sacola_name), "{FFFF00}Sacola de Veiculos {FFFF00}Garantia Lend·rio");
 
 			static const Lendarios[] = {522, 494, 541, 562, 462};
 			
 			{
-				// Objeto lend√°rio (100%)
+				// Objeto lend·rio (100%)
 				{
 					new srand = random(sizeof(Lendarios));
 					format(premio_name, sizeof(premio_name), "{DC9315}%s", VehiclesName[Lendarios[srand] - 400]);
@@ -823,7 +823,7 @@ stock OpenSacola(playerid, sacolamodel)
 		}
 		case MODEL_SACOLA_ACC_ORBES:
 		{
-			format(sacola_name, sizeof(sacola_name), "{ACABAB}Sacola de Acess√≥rios {EDFC79}Or{FFF1C9}bes");
+			format(sacola_name, sizeof(sacola_name), "{ACABAB}Sacola de AcessÛrios {EDFC79}Or{FFF1C9}bes");
 
 			static const ids[] = {19059, 19060, 19061, 19062, 19063};
 			static const names[][] = {"Orbe Roxa", "Orbe Vermelha", "Orbe Verde", "Orbe Dourada", "Orbe Nude"};
