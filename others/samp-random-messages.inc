@@ -1,22 +1,20 @@
-// Mensagens aleatÃ³rias no chat
+// Mensagens aleatórias no chat
 
 // Isso define quantos MS para uma nova mensagem (10 minutos);
 #define     TIMER_REPEAT_NEW_MESSAGE    (10 * 60000)
 
-// Caso aumentar, aumente o [4].
-static const messages_random[9][] =
+// Variavel
+static const messages_random[][] =
 {
-	"Para mais informaÃ§Ãµes use /ajuda",
+	"Para mais informações use /ajuda",
 	"Precisa de ajuda administrativa? utilize o /atendimento ajuda.",
-	"Quer comprar moeda vip? utilize / ajuda para mais informaÃ§Ãµes.",
-	"Dica: Assim que comprar uma casa, pague as dÃ­vidas na lotÃ©rica!",
-	"AtenÃ§Ã£o: Comprar ou vender itens  por dinheiro real Ã© contra as regras.",
-	"Onde vejo as regras do servidor? vocÃª tem acesso a elas entrando no nosso fÃ³rum, utilize o /ajuda.",
-	"Para entrar em uma organizaÃ§Ã£o vocÃª deve falar com alguÃ©m do /lideres ou /sublideres.",
-	"Servidor: NÃ£o cometa atos ANT-RPG como DM, VDM e etc, vocÃª pode ser punido!",
-	"Evite colocar senhas fÃ¡ceis na sua conta como 123, o seu nick, sua conta pode ser invadida!",
-	
-	
+	"Quer comprar moeda vip? utilize / ajuda para mais informações.",
+	"Dica: Assim que comprar uma casa, pague as dívidas na lotérica!",
+	"Atenção: Comprar ou vender itens  por dinheiro real é contra as regras.",
+	"Onde vejo as regras do servidor? você tem acesso a elas entrando no nosso fórum, utilize o /ajuda.",
+	"Para entrar em uma organização você deve falar com alguém do /lideres ou /sublideres.",
+	"Servidor: Não cometa atos ANT-RPG como DM, VDM e etc, você pode ser punido!",
+	"Evite colocar senhas fáceis na sua conta como 123, o seu nick, sua conta pode ser invadida!"
 };
 
 // O timer

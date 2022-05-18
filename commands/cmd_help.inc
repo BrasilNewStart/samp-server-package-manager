@@ -137,11 +137,11 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
         }
        
         case HELP_ENTRAR_ORG: {
-               strcat(MEGAString, "{797978}Como entrar em uma organização: \n{FFFFFF}Para você entrar em uma organização você deve entrar em contato com algum LÍDER ou SUBLIDER para fazer o teste, utilize o /lideres e /sublideres para ver se estão onlines no momento.\n\n");
+               strcat(MEGAString, "{797978}Como entrar em uma organização: \n{FFFFFF}Para você entrar em uma organização você deve entrar em contato com algum LÝDER ou SUBLIDER para fazer o teste, utilize o /lideres e /sublideres para ver se estão onlines no momento.\n\n");
         }
       
         case HELP_FOME_SEDE: {
-            strcat(MEGAString, "{797978}Como bebo água e como alguma coisa?: \n{FFFFFF}Você deve ir em alguma propriedade para comprar água e comida, utilize /gps >> Comércios >> Alhambra(Água), Burget Shot(Comida).\n\n");
+            strcat(MEGAString, "{797978}Como bebo água e como alguma coisa?: \n{FFFFFF}Você deve ir em alguma propriedade para comprar água e comida, utilize /gps >> Comércios >> Alhambra(Ýgua), Burget Shot(Comida).\n\n");
         }
         
         case HELP_VIRAR_VIP: {
@@ -166,7 +166,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Caso eu for vender algo, como eu faço a cobrança?\n");
             strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Após o jogador aceitar a negociação irá ter uma opção chamada AJUSTE na sua tela aperte nela e irá ter as opções para você cobrar.\n\n");
 	    
-            strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Como eu diferencio um veículo de INVENTÁRIO e de CONCESSIONÁRIA?\n");
+            strcat(MEGAString, "\n\n	{DBDCE0}PERGUNTA: {7D8084}Como eu diferencio um veículo de INVENTÝRIO e de CONCESSIONÝRIA?\n");
             strcat(MEGAString, "	{49E468}RESPOSTA: {7D8084}Veículo de inventário sempre irá ter essa sinalização > (1) Exemplo: NRG-500(1) e o de concessionária não.\n\n");
         }
 
@@ -580,7 +580,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             strcat(MEGAString, "{FFFFFF}Mecânico\n");
             strcat(MEGAString, "{FFFFFF}Fazendeiro\n");
 
-            ShowPlayerDialog(playerid, 80, DIALOG_STYLE_LIST, "{DFD136}Ajuda - Empregos", MEGAString, "Prosseguir", "Cancelar");
+            return ShowPlayerDialog(playerid, 80, DIALOG_STYLE_LIST, "{DFD136}Ajuda - Empregos", MEGAString, "Prosseguir", "Cancelar");
         }
         case HELP_HOUSE: {
             strcat(MEGAString, "\n{F8973F}Funções da casa:\n");
@@ -590,7 +590,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             strcat(MEGAString, "        {FF0000}OBS: {FFFFFF}Estamos desenvolvendo mais funções.\n\n");
 
             strcat(MEGAString, "{F8973F}Comprando uma casa:\n");
-            strcat(MEGAString, "       {FF0000}ATENÇÃO {00FA9A}APÓS COMPRAR A CASA, PAGUE AS DÍVIDAS NA LOTÉRICA MAIS PRÓXIMA, CASO CONTRÁRIO IRÁ PERDER CASA.\n");
+            strcat(MEGAString, "       {FF0000}ATENÇÃO {00FA9A}APÓS COMPRAR A CASA, PAGUE AS DÝVIDAS NA LOTÉRICA MAIS PRÓXIMA, CASO CONTRÝRIO IRÝ PERDER CASA.\n");
             strcat(MEGAString, "        {797978}1. {FFFFFF}Você pode encontrar casas a venda pelo /gps » Casas » Localizar casas a venda.\n");
             strcat(MEGAString, "        {797978}2. {FFFFFF}Use o comando /casa comprar para adquirir uma casa a venda.\n");
             strcat(MEGAString, "        {797978}3. {FFFFFF}Você precisa ter o nível, dinheiro ou cash necessário definido na casa para compra-la.\n\n");
@@ -621,16 +621,6 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             strcat(MEGAString, "{797978}Comandos: \n{FFFFFF}/veiculo ajuda | /veiculo comprar | /veiculo revender | /veiculo localizar | /veiculo removertunning | /veiculo estacionar | /trancar.\n\n");
             
             strcat(MEGAString, "{797978}Informações Adicionais: \n{FFFFFF}Caso você não estacione o carro em algum local, ele será salvo na {FFFF00}ultima posição {FFFFFF}que foi encontrado.\n\n");
-        }
-        case HELP_VIP: {
-            strcat(MEGAString, "{7D8084}Beneficios do\t{A4CCC3}Sócio Comum\n");
-            strcat(MEGAString, "{7D8084}Beneficios do\t{DBB960}Sócio Power\n");
-            strcat(MEGAString, "{7D8084}Beneficios do\t{1EE878}Sócio Supreme\n");
-            strcat(MEGAString, "{7D8084}Beneficios do\t{DC0139}Sócio Extreme\n");
-
-            ShowPlayerDialog(playerid, 8742, DIALOG_STYLE_TABLIST, "{DBDCE0}Beneficios", MEGAString, "Ver", "Cancelar");
-
-            return 1;
         }
         case HELP_RADIO: {
             SendClientMessage(playerid, 0xA9A6A6FF, "___________ Ajuda Caixa de Som ___________");
@@ -680,7 +670,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             strcat(MEGAString, "{FFF000}____________________________________________________________________________________________________________");
         }
         case HELP_CAIXA2: {
-            strcat(MEGAString, "\n\n{49E468}CAIXAS DISPONÍVEIS:\n\n");
+            strcat(MEGAString, "\n\n{49E468}CAIXAS DISPONÝVEIS:\n\n");
 
             strcat(MEGAString, "{7D8084}Conteúdo normal: 		{DBDCE0}$10.000 a $20.000 e 15 a 25 respeitos e armas aleatórias\n");
             strcat(MEGAString, "{7D8084}Conteúdo raro:			{86A2CA}1 veículo de inventário aleatório (exceto Helicopteros, Aviões, Barcos, Trens)\n");
@@ -732,6 +722,175 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                 20% de chance de não sofrer um headshot de sniper\n\
                 Minimiza o dano causado em quedas e por fogo", "Fechar", "");
             return 1;
+        }
+        case HELP_VIP: {
+
+            strcat(MEGAString, ""C_SAMP"item\tnível de sócio\n");
+
+            strcat(MEGAString, "{7D8084}Beneficios do\t{A4CCC3}Sócio Comum\n");
+            strcat(MEGAString, "{7D8084}Beneficios do\t{DBB960}Sócio Power\n");
+            strcat(MEGAString, "{7D8084}Beneficios do\t{1EE878}Sócio Supreme\n");
+            strcat(MEGAString, "{7D8084}Beneficios do\t{DC0139}Sócio Extreme\n");
+            
+            inline D_InfoVip(divid, divdialogid, divresponse, divlistitem, string:divtext[])
+            {
+                #pragma unused divid, divdialogid, divtext
+                if (!divresponse) return true;
+
+                switch (divlistitem)
+                {
+                    case 0:
+                    {
+                        strcat(MEGAString, "\n{7D8084}Beneficios de:			{A4CCC3}Sócio Comum\n");
+
+                        strcat(MEGAString, "\n{FFBB00}Ativação:\n\n");
+
+                        strcat(MEGAString, "{7D8084}Receberá			{DBDCE0}2 níveis por mês contratado\n");
+                        strcat(MEGAString, "{7D8084}Receberá			{00AA00}$5.000 {DBDCE0}por mês contratado\n");
+
+
+                        strcat(MEGAString, "\n{FFBB00}Permissões e direitos:\n");
+
+                        strcat(MEGAString, "{7D8084}Compra de veículos		{49E468}2\n");
+                        strcat(MEGAString, "{7D8084}Usar chat-sócio			{DBDCE0}Comando /s\n");
+                        strcat(MEGAString, "{7D8084}Não precisa de nível		{DBDCE0}Para comprar casa\n");
+                        strcat(MEGAString, "{7D8084}Usar menu sócio		{DBDCE0}Comando /menu\n");
+                        strcat(MEGAString, "{7D8084}Tempo no hospital reduzido		{DBDCE0}40% de redução\n");
+                        strcat(MEGAString, "{7D8084}Tempo de prisão reduzido		{DBDCE0}5% de redução\n");
+                        strcat(MEGAString, "{7D8084}Aumento da carga em caminhão		{DBDCE0}+5 KG\n");
+
+                        strcat(MEGAString, "\n{A4CCC3}============================================================\n");
+
+                        return ShowPlayerDialog(playerid, 0, DIALOG_STYLE_MSGBOX, "Informações de beneficio", MEGAString, "Entendi","");
+                    }
+                    case 1:
+                    {
+                        strcat(MEGAString, "\n{7D8084}Beneficios de:			{DBB960}Sócio Power\n");
+
+                        strcat(MEGAString, "\n{FFBB00}Ativação:\n\n");
+
+                        strcat(MEGAString, "{7D8084}Receberá			{DBDCE0}4 níveis por mês contratado\n");
+                        strcat(MEGAString, "{7D8084}Receberá			{00AA00}$9.000 {DBDCE0}por mês contratado\n");
+                        strcat(MEGAString, "{7D8084}Receberá			{FEE73A}Caixa Surpresa Gold {9C9C9C}(1 unidade)\n");
+
+                        strcat(MEGAString, "\n{FFBB00}Ganhos por pagamento horário (Payday):\n\n");
+
+                        strcat(MEGAString, "{7D8084}Respeitos Payday		{49E468}3\n");
+
+                        strcat(MEGAString, "\n{FFBB00}Permissões e direitos:\n");
+
+                        strcat(MEGAString, "{7D8084}Compra de fazendas		{49E468}1\n");
+                        strcat(MEGAString, "{7D8084}Compra de veículos		{49E468}2\n");
+                        strcat(MEGAString, "{7D8084}Compra de casas		{49E468}2\n");
+                        strcat(MEGAString, "{7D8084}Compra de comércio		{49E468}2\n");
+                        strcat(MEGAString, "{7D8084}Montar caixas de itens		{49E468}3\n");
+                        strcat(MEGAString, "{7D8084}Usar kit-socio			{DBDCE0}Qualquer local\n");
+                        strcat(MEGAString, "{7D8084}Usar chat-vip			{DBDCE0}Comando /v\n");
+                        strcat(MEGAString, "{7D8084}Usar chat-sócio			{DBDCE0}Comando /s\n");
+                        strcat(MEGAString, "{7D8084}Não precisa de nível		{DBDCE0}Para comprar casa\n");
+                        strcat(MEGAString, "{7D8084}Usar menu sócio		{DBDCE0}Comando /menu\n");
+                        strcat(MEGAString, "{7D8084}Tempo no hospital reduzido		{DBDCE0}60% de redução\n");
+                        strcat(MEGAString, "{7D8084}Tempo de prisão reduzido		{DBDCE0}10% de redução\n");
+                        strcat(MEGAString, "{7D8084}Aumento da carga em caminhão		{DBDCE0}+10 KG\n");
+                        strcat(MEGAString, "{7D8084}Usar jetpack			{DBDCE0}Comando /jetpack\n");
+                        strcat(MEGAString, "{7D8084}Usar /repararvip		{DBDCE0}Qualquer local\n");
+                        strcat(MEGAString, "{7D8084}Usar /abastecervip		{DBDCE0}Qualquer local\n");
+                        strcat(MEGAString, "{7D8084}Chat local			{DBDCE0}Cor diferenciada\n");
+
+                        strcat(MEGAString, "\n{DBB960}============================================================\n");
+
+                        return ShowPlayerDialog(playerid, 0, DIALOG_STYLE_MSGBOX, "Informações de beneficio", MEGAString, "Entendi","");
+                    }
+                    case 2:
+                    {
+                        strcat(MEGAString, "\n{7D8084}Beneficios de:			{1EE878}Sócio Supreme\n");
+
+                        strcat(MEGAString, "\n{FFBB00}Ativação:\n\n");
+
+                        strcat(MEGAString, "{7D8084}Receberá			{DBDCE0}6 níveis por mês contratado\n");
+                        strcat(MEGAString, "{7D8084}Receberá			{00AA00}$13.000 {DBDCE0}por mês contratado\n");
+
+                        strcat(MEGAString, "\n{FFBB00}Ganhos por pagamento horário (Payday):\n\n");
+
+                        strcat(MEGAString, "{7D8084}Respeitos Payday		{49E468}4\n");
+
+                        strcat(MEGAString, "\n{FFBB00}Permissões e direitos:\n");
+
+                        strcat(MEGAString, "{7D8084}Compra de fazendas		{49E468}2\n");
+                        strcat(MEGAString, "{7D8084}Compra de veículos		{49E468}3\n");
+                        strcat(MEGAString, "{7D8084}Compra de casas		{49E468}2\n");
+                        strcat(MEGAString, "{7D8084}Compra de comércio		{49E468}2\n");
+                        strcat(MEGAString, "{7D8084}Montar caixas de itens		{49E468}3\n");
+                        strcat(MEGAString, "{7D8084}Usar kit-socio			{DBDCE0}Qualquer local\n");
+                        strcat(MEGAString, "{7D8084}Usar chat-vip			{DBDCE0}Comando /v\n");
+                        strcat(MEGAString, "{7D8084}Usar chat-sócio			{DBDCE0}Comando /s\n");
+                        strcat(MEGAString, "{7D8084}Não precisa de nível		{DBDCE0}Para comprar casa\n");
+                        strcat(MEGAString, "{7D8084}Usar menu sócio		{DBDCE0}Comando /menu\n");
+                        strcat(MEGAString, "{7D8084}Tempo no hospital reduzido		{DBDCE0}70% de redução\n");
+                        strcat(MEGAString, "{7D8084}Tempo de prisão reduzido		{DBDCE0}20% de redução\n");
+                        strcat(MEGAString, "{7D8084}Aumento da carga em caminhão		{DBDCE0}+20 KG\n");
+                        strcat(MEGAString, "{7D8084}Usar jetpack			{DBDCE0}Comando /jetpack\n");
+                        strcat(MEGAString, "{7D8084}Usar /repararvip		{DBDCE0}Qualquer local\n");
+                        strcat(MEGAString, "{7D8084}Usar /abastecervip		{DBDCE0}Qualquer local\n");
+                        strcat(MEGAString, "{7D8084}Usar /caixinha			{DBDCE0}Qualquer local\n");
+                        strcat(MEGAString, "{7D8084}Usar /an personalizado		{DBDCE0}Menor pausa de flood\n");
+                        strcat(MEGAString, "{7D8084}Usar /titulos			{DBDCE0}Exclusivo e o personalizado\n");
+                        strcat(MEGAString, "{7D8084}Chat local			{DBDCE0}Cor diferenciada\n");
+                        strcat(MEGAString, "{7D8084}Caixinha Exclusiva		{DBDCE0}Nos presentes (Caixa Surpresa Supreme)\n");
+
+                        strcat(MEGAString, "\n{1EE878}============================================================\n");
+
+                        return ShowPlayerDialog(playerid, 0, DIALOG_STYLE_MSGBOX, "Informações de beneficio", MEGAString, "Entendi","");
+                    }
+                    case 3:
+                    {
+                        strcat(MEGAString, "\n{7D8084}Beneficios de:			{DC0139}Sócio Extreme\n");
+
+                        strcat(MEGAString, "\n{FFBB00}Ativação:\n\n");
+
+                        strcat(MEGAString, "{7D8084}Receberá			{DBDCE0}8 níveis por mês contratado\n");
+                        strcat(MEGAString, "{7D8084}Receberá			{00AA00}$20.000 {DBDCE0}por mês contratado\n");
+
+                        strcat(MEGAString, "\n{FFBB00}Ganhos por pagamento horário (Payday):\n\n");
+
+                        strcat(MEGAString, "{7D8084}Respeitos Payday		{49E468}5\n");
+                        strcat(MEGAString, "{7D8084}Juros bancário			{49E468}(receberá o dobro do normal)\n");
+
+                        strcat(MEGAString, "\n{FFBB00}Permissões e direitos:\n");
+
+                        strcat(MEGAString, "{7D8084}Compra de fazendas		{49E468}2\n");
+                        strcat(MEGAString, "{7D8084}Compra de veículos		{49E468}3\n");
+                        strcat(MEGAString, "{7D8084}Compra de casas		{49E468}3\n");
+                        strcat(MEGAString, "{7D8084}Compra de comércio		{49E468}3\n");
+                        strcat(MEGAString, "{7D8084}Montar caixas de itens		{49E468}4\n");
+                        strcat(MEGAString, "{7D8084}Usar kit-socio			{DBDCE0}Qualquer local\n");
+                        strcat(MEGAString, "{7D8084}Usar chat-vip			{DBDCE0}Comando /v\n");
+                        strcat(MEGAString, "{7D8084}Usar chat-sócio			{DBDCE0}Comando /s\n");
+                        strcat(MEGAString, "{7D8084}Não precisa de nível		{DBDCE0}Para comprar casa\n");
+                        strcat(MEGAString, "{7D8084}Entrar em organização		{DBDCE0}Comando /entrarorg\n");
+                        strcat(MEGAString, "{7D8084}Usar menu sócio		{DBDCE0}Comando /menu\n");
+                        strcat(MEGAString, "{7D8084}Tempo no hospital reduzido		{DBDCE0}80% de redução\n");
+                        strcat(MEGAString, "{7D8084}Tempo de prisão reduzido		{DBDCE0}30% de redução\n");
+                        strcat(MEGAString, "{7D8084}Aumento da carga em caminhão		{DBDCE0}+30 KG\n");
+                        strcat(MEGAString, "{7D8084}Usar jetpack			{DBDCE0}Comando /jetpack\n");
+                        strcat(MEGAString, "{7D8084}Usar /repararvip		{DBDCE0}Qualquer local\n");
+                        strcat(MEGAString, "{7D8084}Usar /abastecervip		{DBDCE0}Qualquer local\n");
+                        strcat(MEGAString, "{7D8084}Usar /caixinha			{DBDCE0}Qualquer local\n");
+                        strcat(MEGAString, "{7D8084}Usar /an personalizado		{DBDCE0}Menor pausa de flood\n");
+                        strcat(MEGAString, "{7D8084}Usar /titulos			{DBDCE0}Exclusivo e o personalizado\n");
+                        strcat(MEGAString, "{7D8084}Chat local			{DBDCE0}Cor diferenciada\n");
+                        strcat(MEGAString, "{7D8084}Caixinha Exclusiva		{DBDCE0}Nos presentes (Caixa Surpresa Supreme)\n");
+                        strcat(MEGAString, "{7D8084}2 empregos			{DBDCE0}Pode ter 2 empregos\n");
+                        strcat(MEGAString, "{7D8084}Caixinha Automatica		{DBDCE0}Pega automatico todo payday\n");
+                        strcat(MEGAString, "{7D8084}Resistencia			{DBDCE0}Demora o dobro de tempo para ficar com fome/sede\n");
+
+                        strcat(MEGAString, "\n{DC0139}============================================================\n");
+
+                        return ShowPlayerDialog(playerid, 0, DIALOG_STYLE_MSGBOX, "Informações de beneficio", MEGAString, "Entendi", "");
+                    }
+                }
+            }
+            Dialog_ShowCallback(playerid, using inline D_InfoVip, DIALOG_STYLE_TABLIST_HEADERS, "Beneficios vip", MEGAString, "Selecionar", "Fechar");
         }
         case HELP_SACOLAS: {
             strcat(MEGAString, "Nome da sacola\tOnde conseguir\n");
@@ -785,7 +944,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         strcat(MEGAString, "\n{FFFFFF}Conteúdo da sacola:\n");
                         strcat(MEGAString, "    {7D8084}Você ganha aleatóriamente um dos itens abaixo:\n\n");
 
-                        strcat(MEGAString, "    {DC9315}LENDÁRIO: {DBDCE0}Skin 230 {DBDCE0}(chances: 5/100)\n");
+                        strcat(MEGAString, "    {DC9315}LENDÝRIO: {DBDCE0}Skin 230 {DBDCE0}(chances: 5/100)\n");
                         strcat(MEGAString, "    {8E03AB}RARO: {DBDCE0}Skin 134 {DBDCE0}(chances: 10/100)\n");
                         strcat(MEGAString, "    {8E03AB}RARO: {DBDCE0}Skin 137 {DBDCE0}(chances: 10/100)\n");
                         strcat(MEGAString, "    {8E03AB}RARO: {DBDCE0}Skin 212 {DBDCE0}(chances: 10/100)\n");
@@ -810,7 +969,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         strcat(MEGAString, "\n{FFFFFF}Conteúdo da sacola:\n");
                         strcat(MEGAString, "    {7D8084}Você ganha aleatóriamente um dos itens abaixo:\n\n");
 
-                        strcat(MEGAString, "    {DC9315}LENDÁRIO: {DBDCE0}NRG-500 {DBDCE0}(chances: 2/100)\n");
+                        strcat(MEGAString, "    {DC9315}LENDÝRIO: {DBDCE0}NRG-500 {DBDCE0}(chances: 2/100)\n");
                         strcat(MEGAString, "    {8E03AB}ÉPICO: {DBDCE0}FCR-900 {DBDCE0}(chances: 4/100)\n");
                         strcat(MEGAString, "    {8E03AB}ÉPICO: {DBDCE0}PCJ-600 {DBDCE0}(chances: 4/100)\n");
                         strcat(MEGAString, "    {8E03AB}ÉPICO: {DBDCE0}BF-400 {DBDCE0}(chances: 4/100)\n");
@@ -1069,7 +1228,6 @@ hook OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
 			case 29: Help_List(playerid, HELP_FAZENDA, "Ajuda Fazenda");
 			case 30: Help_List(playerid, HELP_CAIXA);
 			case 31: Help_List(playerid, HELP_DROGAS);
-			
 		}
 	    return 1;
 	}
