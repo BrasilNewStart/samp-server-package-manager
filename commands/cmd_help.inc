@@ -39,7 +39,6 @@
 #define         OPC_03_PRIMEIROS_PASSOS     35
 #define         OPC_04_PRIMEIROS_PASSOS     36
 #define         HELP_OUROS                  37
-#define         HELP_HELPER                 38
 #define         HELP_FAMILIA                39
 #define         HELP_MOVEIS                 40
 #define         HELP_LOCUTOR                41
@@ -229,32 +228,6 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
 
             return 1;
         }
-
-        case HELP_HELPER: {
-            if (PlayerInfo[playerid][pHelper] < 1) {
-                return SendClientMessage(playerid, -1, "Você não tem autorização para usar esse comando.");
-            }
-
-            strcat(MEGAString, "\n\n{F5DEB3}________________________| AJUDA HELPER |________________________\n");
-
-            strcat(MEGAString, "\n{8B8A8A}Comandos disponíveis:\n");
-
-            strcat(MEGAString, "\n{FFFFFF}> /helpajuda 				{8B8A8A}(Para entrar em modo helper)\n");
-            strcat(MEGAString, "{FFFFFF}> /h 			{8B8A8A}(Chat dos helpers para se comunicar)\n");
-            strcat(MEGAString, "{FFFFFF}> /ah 			{8B8A8A}(Chat dos admins e helpers para se comunicar)\n");
-            strcat(MEGAString, "{FFFFFF}> /ls 			{8B8A8A}(Para se teletransportar até Los Santos)\n");
-            strcat(MEGAString, "{FFFFFF}> /avh 		{8B8A8A}(Para fazer um anúncio para todos jogadores online)\n");
-            strcat(MEGAString, "{FFFFFF}> /ir 				{8B8A8A}(Para abrir/fechar sua fazenda)\n");
-            strcat(MEGAString, "{FFFFFF}> /meavalie 			{8B8A8A}(Para receber avaliação do jogador que você ajudou)\n");
-            strcat(MEGAString, "{FFFFFF}> /tv 			{8B8A8A}(Para ficar de spectador em um jogador)\n");
-            strcat(MEGAString, "{FFFFFF}> /desbugarplayer 			{8B8A8A}(Para tentar desbugar um jogador que pedir)\n");
-            strcat(MEGAString, "{FFFFFF}> /tapa 			{8B8A8A}(Para dar tapa em um jogador)\n");
-            strcat(MEGAString, "{FFFFFF}> /afk 			{8B8A8A}(Para entrar em ausencia no jogo)\n");
-            strcat(MEGAString, "{FFFFFF}> /blocknoob 			{8B8A8A}(Para proibir o uso do /n em um jogador)\n");
-
-            strcat(MEGAString, "\n{F5DEB3}_________________________________________________________________\n\n");
-        }
-
         case HELP_ATENDIMENTO: {
             strcat(MEGAString, "{797978}Como peço uma ajuda administrativa?: \n{FFFFFF}Digite /atendimento ajuda, após isso aguarde o administrador pegar o seu atendimento.\n\n");        
         }
@@ -464,10 +437,6 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                 }
                 SendClientMessage(playerid, COLOR_LIGHTRED, "*** NOVO COMANDO*** /ang /reforco");
             }
-            
-            if (PlayerInfo[playerid][pAdmin] > 0)
-                SendClientMessage(playerid, COLOR_NEWS, "*** ADMIN *** /aa (admin ajuda) /jogar");
-
             SendClientMessage(playerid, COLOR_YELLOW, "*** OUTROS *** /ajudacasa /ajudaaluguel /ajudaempresa /ajudalider");
 
             return 1;
@@ -891,6 +860,8 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                 }
             }
             Dialog_ShowCallback(playerid, using inline D_InfoVip, DIALOG_STYLE_TABLIST_HEADERS, "Beneficios vip", MEGAString, "Selecionar", "Fechar");
+
+            return 1;
         }
         case HELP_SACOLAS: {
             strcat(MEGAString, "Nome da sacola\tOnde conseguir\n");
@@ -1162,6 +1133,8 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                 return true;
             }
             Dialog_ShowCallback(playerid, using inline D_InfosSacola, DIALOG_STYLE_TABLIST_HEADERS, "Selecione uma sacola", MEGAString, "Selecionar", "Fechar");
+
+            return 1;
         }
         case HELP_PROPRIEDADES: {
             SendClientMessage(playerid, -1, " ");

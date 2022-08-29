@@ -7,6 +7,7 @@
 #define	MODEL_SACOLA_VEHICLE_CAMPER 483
 #define MODEL_SACOLA_VEHICLE_REMINGTON 534
 #define MODEL_SACOLA_VEHICLE_PERENNIAL 404
+#define MODEL_SACOLA_VEHICLE_STRATUM 561
 #define MODEL_SACOLA_VEHICLE_NATAL 19065
 #define MODEL_SACOLA_VEHICLE_NEW_YEAR 19059
 #define MODEL_SACOLA_ACC_ORBES 19060
@@ -123,18 +124,18 @@ stock OpenSacola(playerid, sacolamodel)
 				}
 			}
 		}
-		case MODEL_SACOLA_VEHICLE_PERENNIAL:
+		case MODEL_SACOLA_VEHICLE_PERENNIAL, MODEL_SACOLA_VEHICLE_STRATUM:
 		{
-			format(sacola_name, sizeof(sacola_name), "{F4E134}Sacola da Sorte {966B26}Perennial");
+			format(sacola_name, sizeof(sacola_name), "{F4E134}Sacola da Sorte {a8cadf}Stratum");
 
 			switch (rand)
 			{
 				// Objeto raro (15%)
 				case 2, 3: 
 				{
-					format(premio_name, sizeof(premio_name), "{966B26}Perennial");
+					format(premio_name, sizeof(premio_name), "{a8cadf}Stratum");
 
-					givePlayerItem(playerid, ITEM_TYPE_DRONE, 404, 1, "Perennial", 0, 0);
+					givePlayerItem(playerid, ITEM_TYPE_DRONE, 561, 1, "Stratum", 0, 0);
 				}
 				// Objeto comum (25%)
 				case 7..30: 
@@ -738,7 +739,7 @@ stock OpenSacola(playerid, sacolamodel)
 				}
 			}
 
-			givePlayerItem(playerid, ITEM_TYPE_BAU, 19057, 1, "Bau Natal");
+			givePlayerItem(playerid, ITEM_TYPE_DEPOSITORY, 19057, 1, "Bau Natal");
 		}
 		case MODEL_SACOLA_VEHICLE_NEW_YEAR:
 		{
