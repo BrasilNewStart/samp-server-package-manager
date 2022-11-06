@@ -200,8 +200,8 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
 
         case HELP_FAMILIA: {
             SendClientMessage(playerid, -1, "Comandos da família:");
-            SendClientMessage(playerid, COLOR_GRAD1, "/familias /familia /aceitarfamilia /sairfamilia");
-            SendClientMessage(playerid, COLOR_GRAD1, "OBS: Para falar no chat da família, use {FFFFFF}@ [Texto]");
+            SendClientMessage(playerid, COLOR_GRAD, "/familias /familia /aceitarfamilia /sairfamilia");
+            SendClientMessage(playerid, COLOR_GRAD, "OBS: Para falar no chat da família, use {FFFFFF}@ [Texto]");
 
             return 1;
         }
@@ -266,8 +266,8 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             SendClientMessage(playerid, -1,"_______________________________________");
 
             SendClientMessage(playerid, 0x00FF00AA,"Ajuda cozinha");
-            SendClientMessage(playerid, COLOR_GRAD3,"Para cozinhar você precisa ficar de frente para um fogão e usar...");
-            SendClientMessage(playerid, COLOR_GRAD3,"...em seu inventário, uma comida (Carne Crua ou Pizza Congelada).");
+            SendClientMessage(playerid, COLOR_GRAD,"Para cozinhar você precisa ficar de frente para um fogão e usar...");
+            SendClientMessage(playerid, COLOR_GRAD,"...em seu inventário, uma comida (Carne Crua ou Pizza Congelada).");
 
             SendClientMessage(playerid, -1,"_______________________________________");
 
@@ -279,14 +279,14 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             // Caso seja líder
             if (IsLeaderOrg(playerid))
             {
-                SendClientMessage(playerid, COLOR_GRAD2,"- AJUDA LIDER - Comandos Disponiveis:");
-                SendClientMessage(playerid, COLOR_GRAD2,"- LIDER - /convidar /demitir /promover /L");
+                SendClientMessage(playerid, COLOR_GRAD,"- AJUDA LIDER - Comandos Disponiveis:");
+                SendClientMessage(playerid, COLOR_GRAD,"- LIDER - /convidar /demitir /promover /L");
                 SendClientMessage(playerid, COLOR_YELLOW,"- OUTROS - /ajudaaluguel /ajudaempresa /ajudalider /ajudapesca /ajudacozinha");
 
                 // Caso seja líder do governo
                 if(IsLeaderOrg(playerid) == ID_ORG_GOVERNO)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD3,"- PREFEITO - (/pre)feito /setartaxa (Taxa somente para Oficiais)");
+                    SendClientMessage(playerid, COLOR_GRAD,"- PREFEITO - (/pre)feito /setartaxa (Taxa somente para Oficiais)");
                     SendClientMessage(playerid, COLOR_YELLOW,"- OUTROS - /ajudaaluguel /ajudaempresa /ajudalider /ajudapesca /ajudacozinha");
                 }
             }
@@ -303,8 +303,8 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
 
             if (PlayerInfo[playerid][numeroCelular] > 0)
             {
-                SendClientMessage(playerid, COLOR_GRAD2,"- AJUDA CELULAR - Comandos Disponiveis:");
-                SendClientMessage(playerid, COLOR_GRAD2,"- CELULAR - /ligar /sms (/at)ender (/des)ligar /telefone /agenda /agendatel");
+                SendClientMessage(playerid, COLOR_GRAD,"- AJUDA CELULAR - Comandos Disponiveis:");
+                SendClientMessage(playerid, COLOR_GRAD,"- CELULAR - /ligar /sms (/at)ender (/des)ligar /telefone /agenda /agendatel");
             }
             else
             {
@@ -355,85 +355,85 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             strcat(MEGAString, "	{DBDCE0}Acesse o link acima para entender melhor sobre comprar cash no servidor!\n\n");
         }
         case HELP_GERAL: {
-            SendClientMessage(playerid, COLOR_GRAD2, "|______________________ [Ajuda em Geral] ______________________|");
+            SendClientMessage(playerid, COLOR_GRAD, "|______________________ [Ajuda em Geral] ______________________|");
 
-            SendClientMessage(playerid, COLOR_GRAD2, "*** GERAL *** /rg /animlist /animlist2 /orgs /horas /pagar");
-            SendClientMessage(playerid, COLOR_GRAD2, "*** GERAL *** /comprar galao /beber /mostrarlicencas /sublideres");
-            SendClientMessage(playerid, COLOR_GRAD2, "*** GERAL *** /trancar /habilidades /minhaslicencas /loteria");
-            SendClientMessage(playerid, COLOR_GRAD2, "*** GERAL *** /relatorio /cancelar /aceitar /ejetar /usardrogas /contrato /lideres /abastecer");
-            SendClientMessage(playerid, COLOR_GRAD2, "*** GERAL *** /anuncio (/f)amilia /eu /servico /meuskin /guardararma");
-            SendClientMessage(playerid, COLOR_GRAD2, "*** BANCO *** /sacar /transferir /comprarouros /venderouros");
-            SendClientMessage(playerid, COLOR_GRAD2, "*** OUTROS *** /trocarnick livrararmas /largararma /noob");
+            SendClientMessage(playerid, COLOR_GRAD, "*** GERAL *** /rg /animlist /animlist2 /orgs /horas /pagar");
+            SendClientMessage(playerid, COLOR_GRAD, "*** GERAL *** /comprar galao /beber /mostrarlicencas /sublideres");
+            SendClientMessage(playerid, COLOR_GRAD, "*** GERAL *** /trancar /habilidades /minhaslicencas /loteria");
+            SendClientMessage(playerid, COLOR_GRAD, "*** GERAL *** /relatorio /cancelar /aceitar /ejetar /usardrogas /contrato /lideres /abastecer");
+            SendClientMessage(playerid, COLOR_GRAD, "*** GERAL *** /anuncio (/f)amilia /eu /servico /meuskin /guardararma");
+            SendClientMessage(playerid, COLOR_GRAD, "*** BANCO *** /sacar /transferir /comprarouros /venderouros");
+            SendClientMessage(playerid, COLOR_GRAD, "*** OUTROS *** /trocarnick livrararmas /largararma /noob");
 
             //----- Orgs -------------
             if(GetPlayerOrg(playerid) > 0)
             {
                 if(GetPlayerOrg(playerid) == 9 || GetPlayerOrg(playerid) == 32)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** San News *** /aovivo /noticias [Texto] /ga /pReporter ");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** San News *** /aovivo /noticias [Texto] /ga /pReporter ");
                 }
                 if(GetPlayerOrg(playerid) == 5 || GetPlayerOrg(playerid) == 6 || GetPlayerOrg(playerid) == 14 || GetPlayerOrg(playerid) == 17 || GetPlayerOrg(playerid) == 18
                 || GetPlayerOrg(playerid) == 19 || GetPlayerOrg(playerid) == 21
                 || GetPlayerOrg(playerid) == 26|| GetPlayerOrg(playerid) == 27|| GetPlayerOrg(playerid) == 28 || GetPlayerOrg(playerid) == 29)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Gang *** /tr (/ga)ngue /sequestrar /amarrar /refemliberar /desamarrar /bq /rbq /equipargang");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Gang *** /tr (/ga)ngue /sequestrar /amarrar /refemliberar /desamarrar /bq /rbq /equipargang");
                 }
                 if(GetPlayerOrg(playerid) == 15 || GetPlayerOrg(playerid) == 23)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Terroristas *** (/ga) /sequestrar /amarrar /refemliberar /guerra /equipar ");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Terroristas *** (/ga) /sequestrar /amarrar /refemliberar /guerra /equipar ");
                 }
                 if(GetPlayerOrg(playerid) == 25)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Sons Of Anarchy *** /mercenario /laptop (/f)amilia /meucontrato /secreto /largarcontrato ");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Sons Of Anarchy *** /mercenario /laptop (/f)amilia /meucontrato /secreto /largarcontrato ");
                 }
                 if(GetPlayerOrg(playerid) == 21)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Seville Boulevard - Portões *** /ppcc1 /ppcc2");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Seville Boulevard - Portões *** /ppcc1 /ppcc2");
                 }
                 if(GetPlayerOrg(playerid) == 7)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Governo *** /menugoverno /dartaxa /dartaxaorg /m /algemar /desalgemar /su");
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Governo *** /pre /r /d /bolsafamilia /procurados /imo /taser /toquerecolher");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Governo *** /menugoverno /dartaxa /dartaxaorg /m /algemar /desalgemar /su");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Governo *** /pre /r /d /bolsafamilia /procurados /imo /taser /toquerecolher");
                 }
                 if(GetPlayerOrg(playerid) == 8)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Hitmans *** /laptop (/f)amilia /meucontrato /secreto /largarcontrato");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Hitmans *** /laptop (/f)amilia /meucontrato /secreto /largarcontrato");
                 }
                 if(GetPlayerOrg(playerid) == 12)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Máfia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Máfia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
                 }
                 if(GetPlayerOrg(playerid) == 16)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** P.R.F *** /r /d /br /rbr /cone /rcone /rconeall /verificar /pdetran /multarcarro");
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** P.R.F *** /gov /ang /prego /rpr /apreendercarro /taser /equipar");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** P.R.F *** /r /d /br /rbr /cone /rcone /rconeall /verificar /pdetran /multarcarro");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** P.R.F *** /gov /ang /prego /rpr /apreendercarro /taser /equipar");
                 }
                 if(GetPlayerOrg(playerid) == 20)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Terroristas *** (/ga) /tr /sequestrar /amarrar /refemliberar /guerra");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Terroristas *** (/ga) /tr /sequestrar /amarrar /refemliberar /guerra");
                 }
 
                 if(GetPlayerOrg(playerid) == 24)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Máfia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Máfia *** /pcn");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Máfia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Máfia *** /pcn");
                 }
                 if(GetPlayerOrg(playerid) == 13)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Máfia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Máfia *** /pyakuza1 /pyakuza2 /pyakuza3");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Máfia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Máfia *** /pyakuza1 /pyakuza2 /pyakuza3");
                 }
                 if(GetPlayerOrg(playerid) == 22)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** The Triads *** /laptop (/f)amilia /meucontrato /secreto /largarcontrato");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** The Triads *** /laptop (/f)amilia /meucontrato /secreto /largarcontrato");
                 }
                 if (IsACop(playerid))
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** POLICIAIS *** /dp - Para ver todos os Comandos Úteis");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** POLICIAIS *** /dp - Para ver todos os Comandos Úteis");
                 }
                 if(GetPlayerOrg(playerid) == 35)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** BTI *** /pbti1 /pbti2");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** BTI *** /pbti1 /pbti2");
                 }
                 SendClientMessage(playerid, COLOR_LIGHTRED, "*** NOVO COMANDO*** /ang /reforco");
             }
@@ -442,7 +442,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             return 1;
         }
         case HELP_ORG: {
-            SendClientMessage(playerid, COLOR_GRAD2, "____________________ Ajuda organização ____________________");
+            SendClientMessage(playerid, COLOR_GRAD, "____________________ Ajuda organização ____________________");
             if(GetPlayerOrg(playerid) > 0)
             {
                 if(GetPlayerOrg(playerid) == 9)
@@ -459,7 +459,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
 
                 if(GetPlayerOrg(playerid) == 12 || GetPlayerOrg(playerid) == 13 || GetPlayerOrg(playerid) == 24)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Máfia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Máfia *** /ga /tr /sequestrar /amarrar /refemliberar /bq /rbq");
 
                     SendClientMessage(playerid, 0xFFF000AA, "*** CARRO FORTE *** {FFFFFF}/roubarcarroforte");
                 }
@@ -468,60 +468,60 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                 || GetPlayerOrg(playerid) == 19 || GetPlayerOrg(playerid) == 21
                 || GetPlayerOrg(playerid) == 26|| GetPlayerOrg(playerid) == 27|| GetPlayerOrg(playerid) == 29)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Gang *** /tr (/ga)ngue /sequestrar /amarrar /refemliberar /desamarrar /bq /rbq /equipargang /invadirhq /iniciartreinamento");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Gang *** /tr (/ga)ngue /sequestrar /amarrar /refemliberar /desamarrar /bq /rbq /equipargang /invadirhq /iniciartreinamento");
                 }
                 if(GetPlayerOrg(playerid) == 15 || GetPlayerOrg(playerid) == 23 || GetPlayerOrg(playerid) == 20)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Terroristas *** (/ga) /tr /sequestrar /amarrar /refemliberar /guerra /acordo");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Terroristas *** (/ga) /tr /sequestrar /amarrar /refemliberar /guerra /acordo");
                 }
                 if(GetPlayerOrg(playerid) == 25)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Sons Of Anarchy *** /acordo /cancelar ajuda /f");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Sons Of Anarchy *** /acordo /cancelar ajuda /f");
                 }
                 if(GetPlayerOrg(playerid) == 28)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Warlocks *** /acordo /cancelar ajuda /ga");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Warlocks *** /acordo /cancelar ajuda /ga");
                 }
                 if(GetPlayerOrg(playerid) == 21)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Seville Boulevard - Portões *** /ppcc1 /ppcc2");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Seville Boulevard - Portões *** /ppcc1 /ppcc2");
                 }
                 if(GetPlayerOrg(playerid) == 7)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Governo *** /menugoverno /dartaxa /dartaxaorg /m /algemar /desalgemar /su");
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Governo *** /pre /r /d /bolsafamilia /procurados /imo /taser /toquerecolher");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Governo *** /menugoverno /dartaxa /dartaxaorg /m /algemar /desalgemar /su");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Governo *** /pre /r /d /bolsafamilia /procurados /imo /taser /toquerecolher");
                 }
                 if(GetPlayerOrg(playerid) == 8)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Hitmans *** /laptop (/f)amilia /meucontrato /secreto /largarcontrato");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Hitmans *** /laptop (/f)amilia /meucontrato /secreto /largarcontrato");
                 }
                 if(GetPlayerOrg(playerid) == 24)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Máfia *** /pcn");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Máfia *** /pcn");
                 }
                 if(GetPlayerOrg(playerid) == 13)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** Máfia *** /pyakuza1 /pyakuza2 /pyakuza3");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** Máfia *** /pyakuza1 /pyakuza2 /pyakuza3");
                 }
                 if(GetPlayerOrg(playerid) == 22)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** The Triads *** /laptop (/f)amilia /meucontrato /secreto /largarcontrato");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** The Triads *** /laptop (/f)amilia /meucontrato /secreto /largarcontrato");
                 }
                 if(GetPlayerOrg(playerid) == 16)
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** P.R.F *** /r /d /br /rbr /cone /rcone /rconeall /verificar /pdetran /multarcarro");
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** P.R.F *** /gov /ang /prego /rpr /apreendercarro /taser /equipar");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** P.R.F *** /r /d /br /rbr /cone /rcone /rconeall /verificar /pdetran /multarcarro");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** P.R.F *** /gov /ang /prego /rpr /apreendercarro /taser /equipar");
                 }
                 if (IsACop(playerid))
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** POLICIAIS *** /dp - Para ver todos os Comandos Úteis");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** POLICIAIS *** /dp - Para ver todos os Comandos Úteis");
                 }
                 SendClientMessage(playerid, COLOR_LIGHTRED, "*** NOVO COMANDO*** /ang /reforco");
 
                 if (isOrgSeq(playerid))
                 {
-                    SendClientMessage(playerid, COLOR_GRAD2, "*** SEQUESTROS *** Sua organização tem permissão para fazer sequestros");
-                    SendClientMessage(playerid, COLOR_GRAD2, "Comandos: {F0EDED}/sequestrar /refemliberar /arrastarrefem /retirarorgaos /cancelarorgaos /cativeiros");
+                    SendClientMessage(playerid, COLOR_GRAD, "*** SEQUESTROS *** Sua organização tem permissão para fazer sequestros");
+                    SendClientMessage(playerid, COLOR_GRAD, "Comandos: {F0EDED}/sequestrar /refemliberar /arrastarrefem /retirarorgaos /cancelarorgaos /cativeiros");
                 }
 
                 SendClientMessage(playerid, 0x9C9C9CAA, "/localizarcarros {FFFFFF}(Localiza os veículos da organização)");

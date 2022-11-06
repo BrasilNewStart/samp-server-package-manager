@@ -872,7 +872,7 @@ stock OpenSacola(playerid, sacolamodel)
 		default: return false;
 	}
     format(string, sizeof(string), "[SACOLAS]: {FFFFFF}%s (%d) abriu %s {FFFFFF}ganhou '%s{FFFFFF}'.", PlayerName[playerid], playerid, sacola_name, premio_name);
-    SendClientMessageToAll(COLOR_NEWS, string);
+    SendClientMessageToAll(COLOR_ORANGE, string);
 
     return true;
 }
