@@ -323,7 +323,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
             strcat(MEGAString, "\n{EA3D3D}OBS: A melhor forma de relatar um BUG de até 100 caracteres (digite abaixo):");
 
             new conteudo[120];
-            format(conteudo, 120, "%s - %s", SERVER_VERSION, SERVER_VERSION_DATE);
+            format(conteudo, 120, "%s - %s", Version_GetNumber(), _:Version_GetDate());
             return ShowPlayerDialog(playerid, 70, DIALOG_STYLE_INPUT, conteudo, MEGAString, "Enviar", "Cancelar");
         }
         case HELP_COMPRAR_CASH: {
