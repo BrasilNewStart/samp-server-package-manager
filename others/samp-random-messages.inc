@@ -14,6 +14,7 @@ static const messages_random[][] =
 	"Onde vejo as regras do servidor? você tem acesso a elas entrando no nosso fórum, utilize o /ajuda.",
 	"Para entrar em uma organização você deve falar com alguém do /lideres ou /sublideres.",
 	"Servidor: Não cometa atos ANT-RPG como DM, VDM e etc, você pode ser punido!",
+	"Lembre-se de sempre tirar print do seu RG, Inventário, baú e de bens essenciais para caso de bug.",
 	"Evite colocar senhas fáceis na sua conta como 123, o seu nick, sua conta pode ser invadida!"
 };
 
