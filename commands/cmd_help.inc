@@ -734,7 +734,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                     }
                     case 1:
                     {
-                        strcat(MEGAString, "\n{7D8084}Beneficios de:			{DBB960}Sócio Power\n");
+                        strcat(MEGAString, "\n{7D8084}Beneficios de:			{DBB960}Sócio Premium\n");
 
                         strcat(MEGAString, "\n{FFBB00}Ativação:\n\n");
 
@@ -765,6 +765,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         strcat(MEGAString, "{7D8084}Usar /repararvip		{DBDCE0}Qualquer local\n");
                         strcat(MEGAString, "{7D8084}Usar /abastecervip		{DBDCE0}Qualquer local\n");
                         strcat(MEGAString, "{7D8084}Chat local			{DBDCE0}Cor diferenciada\n");
+                        strcat(MEGAString, "{00FF00}new {7D8084}Limite de acessórios		{DBDCE0}3\n");
 
                         strcat(MEGAString, "\n{DBB960}============================================================\n");
 
@@ -806,6 +807,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         strcat(MEGAString, "{7D8084}Usar /titulos			{DBDCE0}Exclusivo e o personalizado\n");
                         strcat(MEGAString, "{7D8084}Chat local			{DBDCE0}Cor diferenciada\n");
                         strcat(MEGAString, "{7D8084}Caixinha Exclusiva		{DBDCE0}Nos presentes (Caixa Surpresa Supreme)\n");
+                        strcat(MEGAString, "{00FF00}new {7D8084}Limite de acessórios		{DBDCE0}4\n");
 
                         strcat(MEGAString, "\n{1EE878}============================================================\n");
 
@@ -852,6 +854,7 @@ stock Help_List(playerid, helpid = 0, const title_help[]="default") {
                         strcat(MEGAString, "{7D8084}2 empregos			{DBDCE0}Pode ter 2 empregos\n");
                         strcat(MEGAString, "{7D8084}Caixinha Automatica		{DBDCE0}Pega automatico todo payday\n");
                         strcat(MEGAString, "{7D8084}Resistencia			{DBDCE0}Demora o dobro de tempo para ficar com fome/sede\n");
+                        strcat(MEGAString, "{00FF00}new {7D8084}Limite de acessórios		{DBDCE0}5\n");
 
                         strcat(MEGAString, "\n{DC0139}============================================================\n");
 
